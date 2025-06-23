@@ -1,0 +1,2107 @@
+<html lang="en" class="" style="--rgb-primary-color: 0,123,255;"><head>
+
+  <meta charset="UTF-8">
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/pen">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    
+  </style>
+
+  
+</head>
+
+<body>
+  html
+--- START OF FILE a,1.html ---
+
+
+
+  <meta charset="UTF-8">
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/pen">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+
+
+
+  html
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাড়ি ভাড়া ম্যানেজমেন্ট (উন্নত ক্লাউড-ফিচার সহ)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        /* CSS কোড আগের মতোই থাকবে, সামান্য পরিমার্জন করা হতে পারে */
+        /* আগের উত্তরে দেওয়া CSS কোড এখানে পেস্ট করুন */
+        /* ... (পূর্ববর্তী CSS কোড এখানে যুক্ত হবে) ... */
+
+        /* --- Global Variables & Base Styles --- */
+        :root {
+            --primary-color: #007bff; /* Vibrant Blue */
+            --primary-color-dark: #0056b3; /* Darker Blue */
+            --primary-color-light: #66b3ff; /* Lighter Blue for gradients/hovers */
+            --secondary-color: #6c757d; /* Cool Grey */
+            --secondary-color-dark: #545b62; /* Darker Grey */
+            --success-color: #28a745; /* Rich Green */
+            --success-color-dark: #1e7e34; /* Darker Green */
+            --danger-color: #dc3545; /* Strong Red */
+            --danger-color-dark: #c82333; /* Darker Red */
+            --warning-color: #ffc107; /* Bright Yellow/Orange */
+            --warning-color-dark: #e0a800; /* Darker Yellow/Orange */
+            --info-color: #17a2b8; /* Teal Blue */
+            --info-color-dark: #117a8b; /* Darker Teal */
+            --light-color: #f8f9fa;
+            --dark-color: #212529; /* Near Black for text */
+            --text-color: #343a40; /* Main text color */
+            --text-color-light: #6c757d; /* Lighter text for secondary info */
+            --border-color: #ced4da; /* Subtle border */
+            --card-bg: #ffffff;
+            --body-bg-gradient-start: #f4f6f9; /* Light, almost white */
+            --body-bg-gradient-end: #e9ecef;   /* Slightly darker light grey */
+            
+            --font-family: 'Noto Sans Bengali', 'Arial', sans-serif;
+            
+            --box-shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --box-shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.1);
+            --box-shadow-strong: 0 12px 28px rgba(0, 0, 0, 0.15);
+            --box-shadow-inset: inset 0 2px 4px rgba(0,0,0,0.06);
+
+            --border-radius-lg: 16px;
+            --border-radius-md: 10px;
+            --border-radius-sm: 6px;
+
+            --premium-gradient-start: #667eea; /* Indigo */
+            --premium-gradient-end: #764ba2;   /* Purple */
+
+            --input-bg: #fdfdfd;
+            --input-focus-bg: #ffffff;
+            --input-focus-border: var(--primary-color);
+            --input-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            --rgb-primary-color: 0,123,255; /* Default, will be updated by JS */
+        }
+
+        /* --- Icons --- */
+        [class^="icon-"], [class*=" icon-"] { display: inline-block; margin-right: 8px; font-family: 'Arial'; vertical-align: middle; }
+        .icon-login::before { content: "🔑"; } .icon-register::before { content: "📝"; }
+        .icon-submit::before { content: "✔️"; } .icon-back::before { content: "↩️"; }
+        .icon-cancel::before { content: "❌"; } .icon-add::before { content: "➕"; }
+        .icon-confirm::before { content: "👍"; } .icon-admin::before { content: "👑"; }
+        .icon-logout::before { content: "🚪"; } .icon-users::before { content: "👥"; }
+        .icon-delete::before { content: "🗑️"; } .icon-edit::before { content: "✏️"; }
+        .icon-save::before { content: "💾"; } .icon-info::before { content: "ℹ️"; }
+        .icon-user::before { content: "👤"; } .icon-mobile::before { content: "📱"; }
+        .icon-meter::before { content: "💡"; } .icon-id::before { content: "🆔"; }
+        .icon-advance-taka::before { content: "💰"; } .icon-nid::before { content: "💳"; }
+        .icon-defaults::before { content: "⚙️"; } .icon-rent::before { content: "🏠"; }
+        .icon-gas::before { content: "🔥"; } .icon-billing::before { content: "🧾"; }
+        .icon-add-bill::before { content: "➕"; } .icon-save-file::before { content: "📄"; }
+        .icon-view::before { content: "👁️‍🗨️"; } .icon-hide::before { content: "🙈"; }
+        .icon-draft::before { content: "✍️"; } .icon-cloud-save::before { content: "☁️"; }
+        .icon-cloud-connect::before { content: "🔗"; } .icon-profile::before { content: "🧑"; }
+
+        /* --- Base & Body --- */
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-family); 
+            line-height: 1.7; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: var(--body-bg-gradient-start);
+            background-image: linear-gradient(145deg, var(--body-bg-gradient-start) 0%, var(--body-bg-gradient-end) 100%);
+            color: var(--text-color); 
+            font-size: 16px; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            min-height: 100vh;
+        }
+
+        .container { max-width: 980px; margin: 20px auto; padding: 0 15px; }
+
+        header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            padding-bottom: 20px; 
+            border-bottom: 3px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, var(--primary-color-light), var(--primary-color-dark));
+        }
+        header h1 { 
+            color: var(--dark-color); 
+            font-weight: 700; 
+            font-size: 2.6em; 
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        header .header-edition {
+            font-size: 0.5em;
+            color: var(--text-color-light);
+            font-weight: 500;
+            display: block;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        h2, h3.modal-title { 
+            color: var(--primary-color-dark); 
+            margin-top: 0; 
+            padding-bottom: 15px; 
+            border-bottom: 2px solid var(--primary-color-light); 
+            font-size: 1.9em; 
+            font-weight: 600; 
+            margin-bottom: 30px;
+        }
+        h3.modal-title { font-size: 1.7em; margin-bottom: 25px; border-bottom-width: 1px; }
+        h3.sub-heading {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            margin-top: 35px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .card { 
+            background-color: var(--card-bg); 
+            padding: 30px 35px; 
+            border-radius: var(--border-radius-lg); 
+            box-shadow: var(--box-shadow-medium); 
+            margin-bottom: 40px; 
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: var(--box-shadow-strong);
+        }
+
+        .form-group { margin-bottom: 25px; }
+        .form-group label { 
+            display: flex; 
+            align-items: center;
+            margin-bottom: 10px; 
+            font-weight: 500; 
+            color: var(--text-color);
+            font-size: 1em; 
+        }
+        .form-group label i { color: var(--primary-color); font-size: 1.1em; }
+
+        input[type="text"], 
+        input[type="number"], 
+        input[type="password"], 
+        input[type="email"],
+        textarea, 
+        select { 
+            width: 100%; 
+            padding: 15px 20px; 
+            border: 1px solid var(--border-color); 
+            border-radius: var(--border-radius-md); 
+            box-sizing: border-box; 
+            font-size: 1em; 
+            font-family: var(--font-family); 
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; 
+            background-color: var(--input-bg);
+            box-shadow: var(--input-shadow);
+        }
+        input:read-only, textarea:read-only { 
+            background-color: #f0f3f5 !important; 
+            cursor: not-allowed; 
+            color: var(--text-color-light); 
+            border-color: #dde2e7;
+            box-shadow: none;
+        } 
+        .confirmed-input { 
+            background-color: #fff8e1 !important; 
+            border-color: #ffe082 !important; 
+            color: #5d4037; 
+        }
+        input[type="text"]:focus, 
+        input[type="number"]:focus, 
+        input[type="password"]:focus, 
+        input[type="email"]:focus,
+        textarea:focus, 
+        select:focus { 
+            border-color: var(--input-focus-border); 
+            box-shadow: 0 0 0 0.25rem rgba(var(--rgb-primary-color),0.25);
+            outline: none; 
+            background-color: var(--input-focus-bg);
+        }
+
+        input.readonly-input { background-color: #e9ecef; cursor: not-allowed; }
+        textarea.auto-expand, input.auto-expand, select.auto-expand { 
+            overflow-y: hidden; 
+            resize: none; 
+            min-height: 56px; 
+        }
+
+        .btn { 
+            padding: 12px 28px; 
+            border: none; 
+            border-radius: var(--border-radius-md); 
+            cursor: pointer; 
+            font-size: 1.05em; 
+            font-weight: 600; 
+            font-family: var(--font-family); 
+            transition: all 0.25s ease-out; 
+            text-decoration: none; 
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px; 
+            margin-bottom: 12px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.08);
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+        }
+        .btn:hover { 
+            transform: translateY(-3px) scale(1.03); 
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.1); 
+        } 
+        .btn:active { 
+            transform: translateY(-1px) scale(0.99); 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        .btn-small { padding: 9px 18px; font-size: 0.9em; font-weight: 500; }
+        
+        .btn-primary { background-image: linear-gradient(to top right, var(--primary-color-light), var(--primary-color)); color: white; border: 1px solid var(--primary-color-dark); } 
+        .btn-primary:hover { background-image: linear-gradient(to top right, var(--primary-color), var(--primary-color-dark)); }
+        
+        .btn-success { background-image: linear-gradient(to top right, #34d058, var(--success-color)); color: white; border: 1px solid var(--success-color-dark); } 
+        .btn-success:hover { background-image: linear-gradient(to top right, var(--success-color), var(--success-color-dark)); }
+        
+        .btn-danger { background-image: linear-gradient(to top right, #ff6b6b, var(--danger-color)); color: white; border: 1px solid var(--danger-color-dark); } 
+        .btn-danger:hover { background-image: linear-gradient(to top right, var(--danger-color), var(--danger-color-dark)); }
+
+        .btn-secondary { background-color: var(--secondary-color); color: white; border: 1px solid var(--secondary-color-dark);} 
+        .btn-secondary:hover { background-color: var(--secondary-color-dark); }
+        
+        .btn-info { background-color: var(--info-color); color: white; border: 1px solid var(--info-color-dark); } 
+        .btn-info:hover { background-color: var(--info-color-dark); } 
+        
+        .btn-warning { background-color: var(--warning-color); color: var(--dark-color); border: 1px solid var(--warning-color-dark); } 
+        .btn-warning:hover { background-color: var(--warning-color-dark); }
+
+        .btn-light { background-color: var(--light-color); color: var(--dark-color); border: 1px solid #ccc;}
+        .btn-light:hover { background-color: #e2e6ea; }
+
+        .note { 
+            font-size: 0.95em; 
+            color: var(--text-color-light); 
+            margin-top: 20px; 
+            background-color: #eef2f5; 
+            padding: 18px 20px; 
+            border-left: 5px solid var(--info-color); 
+            border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; 
+            box-shadow: var(--box-shadow-soft);
+        }
+        .error-message { 
+            color: var(--danger-color-dark); 
+            font-size: 0.92em; 
+            margin-top: 15px; 
+            text-align: left; 
+            font-weight: 500; 
+            padding: 12px 15px;
+            background-color: #fdecea; 
+            border: 1px solid var(--danger-color);
+            border-radius: var(--border-radius-md);
+            display: block;
+        }
+
+        .tenant-info-premium {
+            background-image: linear-gradient(135deg, var(--premium-gradient-start) 0%, var(--premium-gradient-end) 100%);
+            border: none;
+            color: white;
+            padding: 40px;
+        }
+        .tenant-info-premium h2, .tenant-info-premium h3.sub-heading {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .tenant-info-premium .form-group label { color: rgba(255,255,255,0.9); }
+        .tenant-info-premium .form-group label i { color: rgba(255,255,255,0.8); }
+        .tenant-info-premium input, .tenant-info-premium select {
+            background-color: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            box-shadow: var(--box-shadow-inset), 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .tenant-info-premium input::placeholder { color: rgba(255,255,255,0.6); }
+        .tenant-info-premium input:focus, .tenant-info-premium select:focus {
+            background-color: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.7);
+            box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.25);
+        }
+        .tenant-info-premium input.readonly-input {
+             background-color: rgba(0,0,0,0.1) !important;
+             color: rgba(255,255,255,0.7) !important;
+             border-color: rgba(255,255,255,0.2) !important;
+        }
+
+        .tenant-details-grid, .default-values-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px; 
+        }
+        .default-values-grid { margin-top: 35px; }
+
+        #billing-records-container { 
+            margin-top: 35px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 35px; 
+        }
+        .billing-record-card { 
+            border-radius: var(--border-radius-lg); 
+            padding: 28px; 
+            box-shadow: var(--box-shadow-soft); 
+            border-left: 6px solid var(--primary-color-light);
+        }
+        .billing-record-card:hover { 
+            box-shadow: var(--box-shadow-medium); 
+            border-left-color: var(--primary-color);
+        }
+        .billing-record-card.confirmed { 
+            border-left: 6px solid var(--warning-color); 
+            background-color: #fffaf0; 
+        }
+        .billing-record-card.confirmed .card-header { 
+            background-color: #fff3cd; 
+            padding: 18px 22px; 
+            margin: -28px -28px 22px -28px; 
+            border-bottom: 1px solid var(--warning-color); 
+            border-top-left-radius: var(--border-radius-lg); 
+            border-top-right-radius: var(--border-radius-lg);
+        }
+        .billing-record-card.confirmed .card-header h4 { color: var(--warning-color-dark); }
+
+        .billing-record-card .card-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 28px; 
+            padding-bottom: 20px; 
+            border-bottom: 1px solid var(--border-color); 
+        }
+        .billing-record-card .card-header h4 { 
+            margin: 0; 
+            font-size: 1.45em; 
+            color: var(--primary-color-dark); 
+            font-weight: 600;
+        }
+        .billing-record-card .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+        .billing-record-card .card-content.hidden { display: none; }
+        .billing-record-card .form-group { margin-bottom: 20px; }
+        .billing-record-card .form-group label { font-size: 0.9em; margin-bottom: 6px; color: #555; font-weight: 500;}
+        
+        .billing-record-card input[type="number"], 
+        .billing-record-card input[type="text"], 
+        .billing-record-card textarea { 
+            padding: 12px 16px; 
+            font-size: 0.98em; 
+            min-height: 48px; 
+        }
+        .billing-record-card textarea { min-height: 80px; }
+        .billing-record-card .readonly-calc-field { 
+            background-color: #e9f5ff !important; 
+            font-weight: 600; 
+            color: var(--primary-color-dark); 
+            border: 1px dashed var(--primary-color-light);
+            text-align: right;
+        }
+
+        .input-with-meta { display: flex; align-items: center; gap: 12px; }
+        .input-with-meta input { flex-grow: 1; }
+        .input-meta-info { font-size: 0.88em; color: var(--text-color-light); white-space: nowrap; padding-left: 5px; }
+
+        .depositF-group.has-deposit { 
+            background-color: #e0f7fa; 
+            padding: 15px; 
+            border-radius: var(--border-radius-md); 
+            margin: -5px -15px 15px -15px;
+            border: 1px solid #b2ebf2;
+        } 
+        .currentC-paid-amount-group { 
+            padding: 15px; 
+            border-radius: var(--border-radius-md); 
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            border: 1px solid transparent;
+            margin: -5px -15px 15px -15px;
+        }
+        .currentC-paid-amount-group.not-paid { background-color: #ffebee; border-color: #ffcdd2;} 
+        .currentC-paid-amount-group.paid { background-color: #e8f5e9; border-color: #c8e6c9;} 
+        
+        .totalAmountT-field.readonly-calc-field {
+            transition: background-color 0.6s ease-in-out, border-color 0.6s ease-in-out; 
+            font-weight: 700 !important;
+            font-size: 1.1em !important;
+            color: var(--primary-color-dark) !important;
+        } 
+
+        .status-display { 
+            font-weight: 600; 
+            text-align: center; 
+            padding: 14px 18px; 
+            border-radius: var(--border-radius-md); 
+            margin-top: 25px; 
+            font-size: 1.15em; 
+            border: 1px solid transparent;
+            box-shadow: var(--box-shadow-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .status-paid { background-image: linear-gradient(to right, #d4edda, #c8e6c9); color: #155724; border-color: #b8dfba;} 
+        .status-due { background-image: linear-gradient(to right, #f8d7da, #f5c6cb); color: #721c24; border-color: #f1b0b7;}
+        .status-advance { background-image: linear-gradient(to right, #d1ecf1, #bee5eb); color: #0c5460; border-color: #abdde5;} 
+        .status-pending { background-image: linear-gradient(to right, #fff3cd, #ffeeba); color: #856404; border-color: #ffe8a1;}
+
+        .controls { margin-bottom: 30px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+        .page-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .main-save-controls { 
+            margin-top: 45px; 
+            padding-top: 35px; 
+            border-top: 2px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, var(--primary-color-light), var(--primary-color-dark));
+            text-align: center; 
+        }
+        .main-save-controls .btn-save-app-html { 
+            font-size: 1.35em; 
+            padding: 18px 40px; 
+            width: 100%; 
+            max-width: 550px; 
+            font-weight: 700; 
+        }
+
+        .welcome-message { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background-image: linear-gradient(to right, var(--primary-color), var(--primary-color-dark)); 
+            color: white; 
+            padding: 20px 30px; 
+            border-radius: var(--border-radius-lg); 
+            margin-bottom: 35px; 
+            box-shadow: var(--box-shadow-medium); 
+        }
+        .welcome-message h3 { 
+            margin: 0; font-size: 1.6em; font-weight: 600; color: white; border-bottom: none;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .welcome-message #back-to-login-btn { 
+            background-color: rgba(255,255,255,0.15); 
+            color: white; 
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.4);
+            box-shadow: none;
+        }
+        .welcome-message #back-to-login-btn:hover { 
+            background-color: rgba(255,255,255,0.25); 
+            border-color: rgba(255,255,255,0.6);
+        }
+        
+        #user-profile-section { display: none; } /* Initially hidden */
+        #user-profile-section .btn-group { justify-content: space-between; }
+
+
+        #admin-dashboard { border-left: 6px solid var(--danger-color); }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .admin-header h2 { margin-bottom: 0; border-bottom: none; }
+        #admin-dashboard h2 { color: var(--danger-color); }
+
+        .styled-list { list-style-type: none; padding-left: 0; }
+        .tenant-list-item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 16px 20px; 
+            border-bottom: 1px solid #e9ecef; 
+            flex-wrap: wrap; 
+            gap: 12px; 
+            background-color: #fff; 
+            border-radius: var(--border-radius-md); 
+            margin-bottom: 15px;
+            box-shadow: var(--box-shadow-soft);
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .tenant-list-item:hover { background-color: #f8f9fa; transform: translateX(5px); }
+        .tenant-list-item:last-child { border-bottom: none; }
+        .tenant-list-item span.tenant-name-display { font-weight: 600; flex-grow: 1; font-size: 1.1em; color: var(--dark-color); }
+        .tenant-list-item .actions { display: flex; gap: 10px; }
+        .login-user-item { display: flex; align-items: center; justify-content: space-between; }
+        .login-user-item .btn-delete-user { margin-left: 15px; }
+
+        .modal { 
+            display: none; 
+            position: fixed; 
+            z-index: 1050; 
+            left: 0; top: 0; 
+            width: 100%; height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.5); 
+            backdrop-filter: blur(6px); 
+            -webkit-backdrop-filter: blur(6px);
+            padding-top: 40px;
+        }
+        .modal-content { 
+            background-color: var(--card-bg); 
+            margin: 4% auto; 
+            padding: 35px 40px; 
+            border: 1px solid #bbb; 
+            width: 90%; 
+            max-width: 600px; 
+            border-radius: var(--border-radius-lg); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 0 5px rgba(255,255,255,0.1); 
+            animation: modalOpen 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            position: relative;
+        }
+        @keyframes modalOpen { 
+            from { opacity: 0; transform: translateY(-40px) scale(0.92); } 
+            to { opacity: 1; transform: translateY(0) scale(1); } 
+        }
+        .modal-content .btn-group { 
+            margin-top: 35px; 
+            display: flex; 
+            justify-content: flex-end; 
+            gap: 15px; 
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+        }
+        .close-modal-btn {
+            color: #999;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 18px;
+            right: 25px;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+        .close-modal-btn:hover, .close-modal-btn:focus {
+            color: var(--danger-color);
+            text-decoration: none;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .initial-login-options { 
+            text-align: center; 
+            margin: 35px 0;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+        .initial-login-options .btn { 
+            width: auto; 
+            padding: 14px 32px;
+            font-size: 1.15em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) { 
+            body { padding: 15px; font-size: 15px;} 
+            .container { padding: 0 10px; margin: 15px auto; } 
+            header h1 { font-size: 2.2em; } 
+            h2, h3.modal-title { font-size: 1.7em; } 
+            .card { padding: 25px; } 
+            .btn { font-size: 1em; padding: 12px 22px; } 
+            .welcome-message h3 { font-size: 1.4em; } 
+            .main-save-controls .btn-save-app-html {font-size: 1.25em; padding: 16px 32px;} 
+            .modal-content { margin: 8% auto; width: 92%; padding: 25px 30px;} 
+            .initial-login-options { flex-direction: column; gap: 15px; }
+            .initial-login-options .btn { width: 100%; }
+            .tenant-details-grid, .default-values-grid { grid-template-columns: 1fr; gap: 22px; }
+            .tenant-info-premium { padding: 30px; }
+        }
+
+        @media (max-width: 480px) { 
+            body { padding: 10px; }
+            header h1 { font-size: 1.9em; } 
+            h2, h3.modal-title { font-size: 1.5em; } 
+            .btn { padding: 10px 18px; font-size: 0.95em;} 
+            .billing-record-card { padding: 20px 18px; } 
+            .billing-record-card .card-header h4 { font-size: 1.25em; } 
+            .billing-record-card .card-actions { flex-direction: column; align-items: stretch; } 
+            .billing-record-card .card-actions .btn-small { width: 100%; margin-bottom: 8px; } 
+            .tenant-list-item { flex-direction: column; align-items: flex-start; }
+            .tenant-list-item .actions { width: 100%; margin-top: 10px; justify-content: flex-start;} 
+            .main-save-controls .btn-save-app-html {font-size: 1.1em; padding: 14px 25px;} 
+            .modal-content { margin: 6% auto; padding: 20px 25px; } 
+            h3.modal-title {font-size: 1.4em;}
+            .welcome-message { flex-direction: column; align-items: flex-start; gap: 12px; padding: 18px 22px;}
+            .welcome-message #back-to-login-btn { width: 100%; text-align: center;}
+            .depositF-group, .currentC-paid-amount-group { margin-left: -10px; margin-right: -10px; padding: 12px;}
+        }
+
+        /* Data Export Modal Styling */
+        #data-export-modal .modal-content { max-width: 700px; }
+        #exported-json-data {
+            width: 100%;
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            font-family: monospace;
+            font-size: 0.9em;
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius-sm);
+            white-space: pre-wrap; /* Important for JSON formatting */
+        }
+    </style>
+
+
+    <div class="container">
+        <header>
+            <h1>বাড়ি ভাড়া ম্যানেজমেন্ট <span class="header-edition">(উন্নত সংস্করণ ৩.১ - খসড়া ও ক্লাউড সিমুলেশন)</span></h1>
+        </header>
+
+        <!-- User Profile/Cloud Connect Section (Initially Hidden) -->
+        <section id="user-profile-section" class="card" style="display: none;">
+            <h2><i class="icon-profile"></i> ব্যবহারকারী প্রোফাইল ও ক্লাউড সংযোগ</h2>
+            <!-- এই div এবং বাটনটি নতুন যোগ করা হয়েছে -->
+            <div class="page-actions" style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--border-color);">
+                <button id="profile-back-to-initial-btn" class="btn btn-info"><i class="icon-back"></i> প্রাথমিক পেইজে ফিরে যান</button>
+            </div>
+            <div id="user-info-display" style="margin-bottom:20px;">
+                <p>ইমেইল: <span id="display-user-email">ahshahriar.true7@gmail.com</span></p>
+            </div>
+            <div class="form-group">
+                <label for="profile-email">আপনার ইমেইল (Google Account):</label>
+                <input type="email" id="profile-email" placeholder="example@gmail.com" class="auto-expand" style="height: 55px;">
+            </div>
+            <!-- Google Sign-In button can be placed here if using Google Identity Services -->
+            <!-- <div id="g_id_onload"
+                 data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+                 data-callback="handleGoogleSignIn">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div> -->
+            
+            <!-- বিদ্যমান নোটটি পরিমার্জিত করা হলো -->
+            <p class="note"><b>বিঃদ্রঃ</b> এই অ্যাপটি সম্পূর্ণরূপে আপনার ব্রাউজারে (ক্লায়েন্ট-সাইড) চলে। সরাসরি Google Drive বা Google Docs-এ স্বয়ংক্রিয়ভাবে ফাইল সেভ করার জন্য সাধারণত একটি সার্ভার-সাইড উপাদান অথবা Google API-এর সাথে আরও জটিল ইন্টিগ্রেশন প্রয়োজন হয় (যেমন Google Sign-In এবং Drive API ব্যবহার করে OAuth2 প্রমাণীকরণ)। এই উন্নত ইন্টিগ্রেশন সেটআপ করা এই অ্যাপ্লিকেশনের বর্তমান কাঠামোর বাইরে।</p>
+            <p class="note">আপাতত, "ক্লাউডে সেভ করুন (JSON)" বাটনের মাধ্যমে আপনি ডেটার একটি কপি পাবেন যা ম্যানুয়ালি Google Docs, Google Drive-এ একটি টেক্সট ফাইল হিসেবে, অথবা অন্য কোনো ক্লাউড স্টোরেজে সংরক্ষণ করতে পারেন।</p>
+            <p class="note" style="font-size: 0.85em;"><b>উন্নত ব্যবহারকারীদের জন্য:</b> আপনি যদি Google Apps Script ব্যবহার করতে চান, তাহলে একটি Apps Script Web App তৈরি করে এই HTML অ্যাপ থেকে ডেটা সেখানে পাঠানো সম্ভব, যা পরে আপনার নির্ধারিত Google Sheet বা Doc-এ ডেটা সংরক্ষণ করতে পারবে। এর জন্য Apps Script এবং Web App Deployment সম্পর্কে ধারণা থাকতে হবে।</p>
+
+             <div class="btn-group">
+                <button id="login-profile-btn" class="btn btn-primary" style="display: none;"><i class="icon-login"></i> ইমেইল দিয়ে লগইন/সেট করুন</button>
+                <button id="logout-profile-btn" class="btn btn-secondary" style="display: inline-block;"><i class="icon-logout"></i> প্রোফাইল লগআউট</button>
+            </div>
+            <p id="profile-message" class="error-message" style="display:none;"></p>
+        </section>
+
+
+        <section id="initial-view" class="card" style="display: none;">
+            <h2>স্বাগতম!</h2>
+            <p>আপনার ভাড়া ব্যবস্থাপনা শুরু করতে নিচের অপশন থেকে একটি বেছে নিন:</p>
+            <div class="initial-login-options">
+                <button id="show-user-profile-btn" class="btn btn-info"><i class="icon-profile"></i> প্রোফাইল/ক্লাউড সেটিং</button>
+                <button id="show-login-form-btn" class="btn btn-primary"><i class="icon-login"></i> বিদ্যমান আইডিতে লগইন</button>
+                <button id="show-register-form-btn" class="btn btn-success"><i class="icon-register"></i> নতুন আইডি তৈরি করুন</button>
+            </div>
+            <div id="load-draft-prompt" style="display: none; margin-top: 20px;" class="note">
+                <p>আপনার একটি খসড়া (<span id="draft-user-name">Shahriar</span> এর জন্য) পাওয়া গেছে। আপনি কি এটি লোড করতে চান?</p>
+                <button id="confirm-load-draft-btn" class="btn btn-success btn-small">হ্যাঁ, লোড করুন</button>
+                <button id="cancel-load-draft-btn" class="btn btn-secondary btn-small">না, নতুন করে শুরু করুন</button>
+            </div>
+            <p class="note" style="margin-top: 30px;"><b>গুরুত্বপূর্ণ নির্দেশনা:</b> এই অ্যাপ্লিকেশনের সকল ডেটা এই HTML ফাইলের মধ্যেই সংরক্ষিত থাকে। সকল পরিবর্তন স্থায়ীভাবে সেভ করতে, অ্যাপের ভেতরে একদম নিচে থাকা সবুজ রঙের <b>"সকল পরিবর্তন এই ফাইলে সেভ করুন (ডাউনলোড)"</b> বাটন ব্যবহার করুন।</p>
+        </section>
+
+        <!-- Login, Register, Modals (HTML structure remains largely the same as previous version) -->
+        <section id="login-form-section" class="card" style="display: none;">
+            <h2>লগইন করুন</h2>
+            <div class="form-group">
+                <label for="login-username-dropdown">ভাড়াটিয়ার নাম (নির্বাচন করুন):</label>
+                <div id="login-username-dropdown-container"><select id="login-username-dropdown" class="auto-expand" style="height: 56px;"><option value="">-- ভাড়াটিয়া নির্বাচন করুন --</option><option value="Shahriar">Shahriar</option></select></div>
+            </div>
+            <div class="form-group">
+                <label for="login-admin-username">অথবা অ্যাডমিন/অন্যান্য ইউজারনেম:</label>
+                <input type="text" id="login-admin-username" placeholder="অ্যাডমিন বা নতুন ভাড়াটিয়ার নাম টাইপ করুন" class="auto-expand" style="height: 60px;" disabled="">
+            </div>
+            <div class="form-group">
+                <label for="login-password">পাসওয়ার্ড / সিক্রেট কোড:</label>
+                <input type="password" id="login-password" placeholder="পাসওয়ার্ড বা কোড দিন">
+            </div>
+            <button id="login-submit-btn" class="btn btn-primary"><i class="icon-submit"></i> লগইন</button>
+            <button id="back-to-initial-view-from-login-2" class="btn btn-secondary"><i class="icon-back"></i> ফিরে যান</button>
+            <p id="login-error" class="error-message" style="display:none;"></p>
+        </section>
+
+        <div id="register-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal-btn" data-modal-id="register-modal">×</span>
+                <h3 class="modal-title">নতুন আইডি তৈরি করুন</h3>
+                <div class="form-group"> <label for="register-username">ব্যবহারকারীর নাম (কমপক্ষে ৩ অক্ষর):</label> <input type="text" id="register-username" placeholder="একটি ইউনিক নাম দিন" class="auto-expand" style="height: 60px;"> </div>
+                <div class="form-group"> <label for="register-password">পাসওয়ার্ড (কমপক্ষে ৪ অক্ষর):</label> <input type="password" id="register-password" placeholder="একটি শক্তিশালী পাসওয়ার্ড দিন"> </div>
+                <div class="form-group"> <label for="register-confirm-password">পাসওয়ার্ডটি পুনরায় লিখুন:</label> <input type="password" id="register-confirm-password" placeholder="পাসওয়ার্ডটি আবার দিন"> </div>
+                <p id="register-error" class="error-message" style="display:none;"></p>
+                <div class="btn-group"> <button id="register-submit-btn" class="btn btn-success"><i class="icon-register"></i> আইডি তৈরি করুন</button> <button id="cancel-register-btn" type="button" class="btn btn-secondary" data-modal-id="register-modal"><i class="icon-cancel"></i> বাতিল করুন</button> </div>
+            </div>
+        </div>
+        
+        <div id="add-month-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal-btn" data-modal-id="add-month-modal">×</span>
+                <h3 class="modal-title">নতুন মাসের বিল যোগ করুন</h3>
+                <div class="form-group"> <label for="new-bill-year">বছর:</label> <select id="new-bill-year" class="auto-expand" style="height: 56px;"><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option></select> </div>
+                <div class="form-group"> <label for="new-bill-month">মাস:</label> <select id="new-bill-month" class="auto-expand" style="height: 56px;"><option value="1">জানুয়ারি</option><option value="2">ফেব্রুয়ারি</option><option value="3">মার্চ</option><option value="4">এপ্রিল</option><option value="5">মে</option><option value="6">জুন</option><option value="7">জুলাই</option><option value="8">আগস্ট</option><option value="9">সেপ্টেম্বর</option><option value="10">অক্টোবর</option><option value="11">নভেম্বর</option><option value="12">ডিসেম্বর</option></select> </div>
+                <p id="add-month-error" class="error-message" style="display:none;"></p>
+                <div class="btn-group"> <button id="confirm-add-month-btn" class="btn btn-success"><i class="icon-add"></i> যোগ করুন</button> <button type="button" class="btn btn-secondary" data-modal-id="add-month-modal"><i class="icon-cancel"></i> বাতিল</button> </div>
+            </div>
+        </div>
+
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                 <span class="close-modal-btn" data-modal-id="confirmation-modal">×</span>
+                <h3 class="modal-title" id="confirmation-modal-title">নিশ্চিতকরণ</h3>
+                <p id="confirmation-modal-message">আপনি কি এটি করতে চান?</p>
+                <div class="btn-group"> <button id="confirm-action-btn" class="btn btn-danger"><i class="icon-confirm"></i> হ্যাঁ, নিশ্চিত</button> <button id="cancel-action-btn" class="btn btn-secondary" data-modal-id="confirmation-modal"><i class="icon-cancel"></i> না, বাতিল</button> </div>
+            </div>
+        </div>
+        
+        <!-- Data Export Modal for Cloud Save Simulation -->
+        <div id="data-export-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal-btn" data-modal-id="data-export-modal">×</span>
+                <h3 class="modal-title">ডেটা এক্সপোর্ট (JSON)</h3>
+                <p>নিচের JSON ডেটা কপি করে আপনার Google Docs বা অন্য কোনো নিরাপদ স্থানে পেস্ট করে সংরক্ষণ করুন।</p>
+                <textarea id="exported-json-data" readonly="" class="auto-expand" style="height: 5px;"></textarea>
+                <div class="btn-group">
+                    <button id="copy-json-btn" class="btn btn-primary"><i class="icon-save"></i> JSON কপি করুন</button>
+                    <button type="button" class="btn btn-secondary" data-modal-id="data-export-modal"><i class="icon-cancel"></i> বন্ধ করুন</button>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="admin-dashboard" class="card" style="display:none;">
+            <div class="admin-header"> <h2><i class="icon-admin"></i> অ্যাডমিন ড্যাশবোর্ড</h2> <button id="admin-logout-btn" class="btn btn-secondary btn-small"><i class="icon-logout"></i> অ্যাডমিন লগআউট</button> </div>
+            <div class="page-actions">
+                 <button id="admin-back-to-initial-view-btn" class="btn btn-info"><i class="icon-back"></i> প্রাথমিক পেইজে ফিরে যান</button>
+            </div>
+            <p>আপনি অ্যাডমিন হিসেবে লগইন করেছেন। এখান থেকে আপনি নিবন্ধিত ভাড়াটিয়াদের পরিচালনা করতে পারবেন।</p>
+            <div id="admin-tenant-list-container" style="margin-top: 20px;"> <h3><i class="icon-users"></i> সকল নিবন্ধিত ভাড়াটিয়া:</h3> <ul id="admin-tenant-list" class="styled-list"></ul> </div>
+            <div class="main-save-controls"> <button id="admin-save-all-data-html-btn" class="btn btn-save-app-html"><i class="icon-save"></i> সকল ইউজারের ডেটা সহ এই অ্যাপটি ডাউনলোড করুন (সেভ)</button> </div>
+        </section>
+
+        <main id="app-content" style="display: block;">
+            <div class="welcome-message"> 
+                <h3>স্বাগতম, <span id="display-tenant-name">Shahriar</span>! <span id="cloud-status-indicator" style="font-size:0.7em; opacity:0.7;">(ahshahriar.true7@gmail.com এর সাথে সংযুক্ত)</span></h3> 
+                <button id="back-to-login-btn" class="btn btn-light"><i class="icon-logout"></i> লগআউট / ব্যবহারকারী পরিবর্তন</button> 
+            </div>
+             <div class="page-actions">
+                <button id="save-draft-btn" class="btn btn-info"><i class="icon-draft"></i> খসড়া সংরক্ষণ করুন</button>
+                <button id="save-to-cloud-btn" class="btn btn-warning"><i class="icon-cloud-save"></i> ক্লাউডে সেভ করুন (JSON)</button>
+            </div>
+            
+            <section id="tenant-info-section" class="card tenant-info-premium"> 
+                <h2><i class="icon-info"></i> ভাড়াটিয়ার সাধারণ তথ্য</h2> 
+                <div class="tenant-details-grid"> 
+                    <div class="form-group"> <label for="tenant-name"><i class="icon-user"></i> নিবন্ধিত নাম:</label> <input type="text" id="tenant-name" readonly="" class="readonly-input auto-expand" style="height: 60px;"> </div> 
+                    <div class="form-group"> <label for="tenant-mobile"><i class="icon-mobile"></i> মোবাইল নম্বর:</label> <input type="text" id="tenant-mobile" class="auto-expand" placeholder="মোবাইল নম্বর" style="height: 60px;"> </div> 
+                    <div class="form-group"> <label for="tenant-meter"><i class="icon-meter"></i> মিটার নম্বর:</label> <input type="text" id="tenant-meter" class="auto-expand" placeholder="মিটার নম্বর" style="height: 60px;"> </div> 
+                    <div class="form-group"> <label for="tenant-customer-id"><i class="icon-id"></i> কাস্টমার আইডি:</label> <input type="text" id="tenant-customer-id" class="auto-expand" placeholder="কাস্টমার আইডি" style="height: 60px;"> </div> 
+                    <div class="form-group"> <label for="tenant-advance"><i class="icon-advance-taka"></i> অ্যাডভান্স (টাকা):</label> <input type="number" id="tenant-advance" class="auto-expand" placeholder="অ্যাডভান্স টাকা" style="height: 55px;"> </div> 
+                    <div class="form-group"> <label for="tenant-nid"><i class="icon-nid"></i> NID কার্ড নম্বর:</label> <input type="text" id="tenant-nid" class="auto-expand" placeholder="NID নম্বর" style="height: 60px;"> </div> 
+                </div> 
+                <h3 class="sub-heading"><i class="icon-defaults"></i> ডিফল্ট মাসিক চার্জসমূহ</h3>
+                <div class="default-values-grid"> 
+                    <div class="form-group"> <label for="default-rent"><i class="icon-rent"></i> ডিফল্ট মাসিক ভাড়া (A):</label> <input type="number" id="default-rent" class="auto-expand" placeholder="মাসিক ভাড়া" style="height: 55px;"> </div> 
+                    <div class="form-group"> <label for="default-gas"><i class="icon-gas"></i> ডিফল্ট গ্যাস বিল (B):</label> <input type="number" id="default-gas" class="auto-expand" placeholder="গ্যাস বিল" style="height: 55px;"> </div> 
+                </div> 
+            </section>
+            
+            <section id="billing-section" class="card"> 
+                <h2><i class="icon-billing"></i> মাসিক বিলিং রেকর্ডস</h2> 
+                <div class="controls"> 
+                    <button id="add-month-btn" class="btn btn-success"><i class="icon-add-bill"></i> নতুন মাসের বিল যোগ করুন</button> 
+                </div> 
+                <div id="billing-records-container"><div class="billing-record-card" data-id="record_1750701335127_2tdsp7a50"><div class="card-header"><h4>বিল: জুন, 2025</h4><div class="card-actions"><button type="button" class="btn btn-secondary btn-small toggle-content-btn"><i class="icon-hide"></i> হাইড</button><button type="button" class="btn btn-small btn-warning confirm-record-btn"><i class="icon-confirm"></i> কনফার্ম</button><button type="button" class="btn btn-danger btn-small delete-record-btn"><i class="icon-delete"></i> মুছুন</button></div></div><div class="card-content"><div class="form-group "><label>ভাড়া (A):</label><div class=""><input type="number" class="rentA auto-expand" placeholder="0.00" step="0.01" style="height: 47px;"></div></div><div class="form-group "><label>গ্যাস (B):</label><div class=""><input type="number" class="gasB auto-expand" placeholder="0.00" step="0.01" style="height: 47px;"></div></div><div class="form-group "><label>কারেন্ট বিল (C):</label><div class=""><input type="number" class="currentC auto-expand" placeholder="0.00" step="0.01" style="height: 47px;"></div></div><div class="form-group currentC-paid-amount-group not-paid"><label>কারেন্ট বিল জমা (যদি থাকে):</label><div class="input-with-meta"><input type="number" step="0.01" class="currentCPaidAmount auto-expand" placeholder="0.00" style="height: 47px;"><button type="button" class="btn btn-small btn-danger currentC-paid-btn">পরিশোধ করুন</button></div></div><div class="form-group "><label>ভ্যাট (D):</label><div class=""><input type="number" class="vatD auto-expand" placeholder="0.00" step="0.01" style="height: 47px;"></div></div><div class="form-group "><label>সাব-টোটাল (X = A+B+C+D):</label><div class=""><input type="number" class="subTotalX auto-expand readonly-calc-field" step="0.01" readonly="" style="height: 47px;"></div></div><div class="form-group "><label>পূর্বের বকেয়া (H):</label><div class=""><input type="number" class="prevArrearsH auto-expand" placeholder="0.00" step="0.01" style="height: 47px;"></div></div><div class="form-group "><label>মোট প্রদেয় (T = X+H):</label><div class=""><input type="number" class="totalAmountT-field auto-expand readonly-calc-field" step="0.01" readonly="" style="height: 47px;"></div></div><div class="form-group depositF-group has-deposit"><label>মোট জমা (F):</label><div class="input-with-meta"><input type="number" class="depositF auto-expand" placeholder="0.00" step="0.01" style="height: 47px;"><span class="input-meta-info deposit-date-display">(২৩/০৬/২০২৫)</span></div></div><div class="form-group "><label>নতুন বকেয়া/অগ্রিম (G = T-F):</label><div class=""><input type="number" class="newArrearsG auto-expand readonly-calc-field" step="0.01" readonly="" style="height: 47px;"></div></div><div class="form-group "><label>মন্তব্য:</label><div class=""><textarea class="comment auto-expand" placeholder="আপনার মন্তব্য লিখুন (যদি থাকে)" style="height: 84px;"></textarea></div></div><div class="status-display status-paid">পরিশোধিত</div></div></div></div> 
+                <p id="no-records-message" class="note" style="display: none; text-align: center; padding: 20px;">এখনও কোনো বিলিং রেকর্ড যোগ করা হয়নি।</p> 
+            </section>
+            
+            <div class="main-save-controls"> 
+                <button id="download-updated-html-btn" class="btn btn-save-app-html"><i class="icon-save-file"></i> সকল পরিবর্তন এই ফাইলে সেভ করুন (ডাউনলোড)</button> 
+            </div>
+        </main>
+    </div>
+    
+    <script id="app-data-store" type="application/json">{
+  "users": {
+    "tenant_shahriar_12345": {
+      "tenantId": "tenant_shahriar_12345",
+      "loginName": "Shahriar",
+      "data": {
+        "info": {
+          "name": "Shahriar",
+          "mobile": "",
+          "meter": "",
+          "customerId": "",
+          "advance": "",
+          "nid": "",
+          "defaultRent": "1200",
+          "defaultGas": "5000"
+        },
+        "billingRecords": [
+          {
+            "id": "record_1750701335127_2tdsp7a50",
+            "year": 2025,
+            "month": 6,
+            "rentA": 1200,
+            "gasB": 5000,
+            "currentC": 0,
+            "currentCPaidAmount": 0,
+            "currentCPaid": false,
+            "vatD": 0,
+            "prevArrearsH": 0,
+            "depositF": 6200,
+            "depositDate": "2025-06-23T17:55:48.307Z",
+            "comment": "",
+            "confirmed": false,
+            "hidden": false,
+            "subTotalX": 6200,
+            "totalAmountT": 6200,
+            "newArrearsG": 0
+          }
+        ]
+      }
+    }
+  },
+  "user_profiles": {
+    "ahshahriar.true7@gmail.com": {
+      "profileEmail": "ahshahriar.true7@gmail.com",
+      "tenantId": "tenant_shahriar_12345",
+      "loginName": "Shahriar",
+      "data": {
+        "info": {
+          "name": "Shahriar",
+          "mobile": "",
+          "meter": "",
+          "customerId": "",
+          "advance": "",
+          "nid": "",
+          "defaultRent": "1200",
+          "defaultGas": "5000"
+        },
+        "billingRecords": [
+          {
+            "id": "record_1750701335127_2tdsp7a50",
+            "year": 2025,
+            "month": 6,
+            "rentA": 1200,
+            "gasB": 5000,
+            "currentC": 0,
+            "currentCPaidAmount": 0,
+            "currentCPaid": false,
+            "vatD": 0,
+            "prevArrearsH": 0,
+            "depositF": 6200,
+            "depositDate": "2025-06-23T17:55:48.307Z",
+            "comment": "",
+            "confirmed": false,
+            "hidden": false,
+            "subTotalX": 6200,
+            "totalAmountT": 6200,
+            "newArrearsG": 0
+          }
+        ]
+      }
+    }
+  }
+}</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const MASTER_USERNAME = "admin";
+            const MASTER_PASSWORD = "yourSecurePassword123!";
+
+            const elements = {
+                // ... (আগের মতো সব elements এখানে থাকবে) ...
+                initialView: document.getElementById('initial-view'),
+                showUserProfileBtn: document.getElementById('show-user-profile-btn'),
+                profileBackToInitialBtn: document.getElementById('profile-back-to-initial-btn'), // নতুন যোগ করা হয়েছে
+                userProfileSection: document.getElementById('user-profile-section'),
+                profileEmailInput: document.getElementById('profile-email'),
+                loginProfileBtn: document.getElementById('login-profile-btn'),
+                logoutProfileBtn: document.getElementById('logout-profile-btn'),
+                displayUserEmail: document.getElementById('display-user-email'),
+                profileMessage: document.getElementById('profile-message'),
+                cloudStatusIndicator: document.getElementById('cloud-status-indicator'),
+
+                showLoginFormBtn: document.getElementById('show-login-form-btn'),
+                showRegisterFormBtn: document.getElementById('show-register-form-btn'),
+                loginFormSection: document.getElementById('login-form-section'),
+                loginUsernameDropdownContainer: document.getElementById('login-username-dropdown-container'),
+                loginAdminUsernameInput: document.getElementById('login-admin-username'),
+                loginPasswordInput: document.getElementById('login-password'),
+                loginSubmitBtn: document.getElementById('login-submit-btn'),
+                loginError: document.getElementById('login-error'),
+                backToInitialViewFromLogin2: document.getElementById('back-to-initial-view-from-login-2'), // Changed ID
+                
+                registerModal: document.getElementById('register-modal'),
+                registerUsernameInput: document.getElementById('register-username'),
+                registerPasswordInput: document.getElementById('register-password'),
+                registerConfirmPasswordInput: document.getElementById('register-confirm-password'),
+                registerSubmitBtn: document.getElementById('register-submit-btn'),
+                cancelRegisterBtn: document.getElementById('cancel-register-btn'),
+                registerError: document.getElementById('register-error'),
+
+                addMonthModal: document.getElementById('add-month-modal'),
+                newBillYearSelect: document.getElementById('new-bill-year'),
+                newBillMonthSelect: document.getElementById('new-bill-month'),
+                confirmAddMonthBtn: document.getElementById('confirm-add-month-btn'),
+                addMonthError: document.getElementById('add-month-error'),
+
+                confirmationModal: document.getElementById('confirmation-modal'),
+                confirmationModalTitle: document.getElementById('confirmation-modal-title'),
+                confirmationModalMessage: document.getElementById('confirmation-modal-message'),
+                confirmActionBtn: document.getElementById('confirm-action-btn'),
+                cancelActionBtn: document.getElementById('cancel-action-btn'),
+                
+                dataExportModal: document.getElementById('data-export-modal'),
+                exportedJsonDataTextarea: document.getElementById('exported-json-data'),
+                copyJsonBtn: document.getElementById('copy-json-btn'),
+
+
+                appContent: document.getElementById('app-content'),
+                saveDraftBtn: document.getElementById('save-draft-btn'),
+                saveToCloudBtn: document.getElementById('save-to-cloud-btn'),
+                loadDraftPrompt: document.getElementById('load-draft-prompt'),
+                draftUserNameSpan: document.getElementById('draft-user-name'),
+                confirmLoadDraftBtn: document.getElementById('confirm-load-draft-btn'),
+                cancelLoadDraftBtn: document.getElementById('cancel-load-draft-btn'),
+
+                adminDashboard: document.getElementById('admin-dashboard'),
+                adminLogoutBtn: document.getElementById('admin-logout-btn'),
+                adminBackToInitialViewBtn: document.getElementById('admin-back-to-initial-view-btn'),
+                displayTenantName: document.getElementById('display-tenant-name'),
+                backToLoginBtn: document.getElementById('back-to-login-btn'),
+                
+                tenantNameInput: document.getElementById('tenant-name'),
+                tenantMobileInput: document.getElementById('tenant-mobile'),
+                tenantMeterInput: document.getElementById('tenant-meter'),
+                tenantCustomerIdInput: document.getElementById('tenant-customer-id'),
+                tenantAdvanceInput: document.getElementById('tenant-advance'),
+                tenantNidInput: document.getElementById('tenant-nid'),
+                defaultRentInput: document.getElementById('default-rent'),
+                defaultGasInput: document.getElementById('default-gas'),
+
+                addMonthBtn: document.getElementById('add-month-btn'),
+                downloadUpdatedHtmlBtn: document.getElementById('download-updated-html-btn'),
+                adminDownloadAllDataHtmlBtn: document.getElementById('admin-save-all-data-html-btn'),
+                
+                billingRecordsContainer: document.getElementById('billing-records-container'),
+                noRecordsMessage: document.getElementById('no-records-message'),
+                appDataStoreScript: document.getElementById('app-data-store'),
+                adminTenantList: document.getElementById('admin-tenant-list')
+            };
+
+            let masterAppData = { users: {}, user_profiles: {} }; // Added user_profiles
+            let currentTenantId = null;
+            let currentTenantLoginName = '';
+            let currentTenantData = {};
+            let isAdminLoggedIn = false;
+            let loggedInUserEmail = null; // For profile/cloud
+            const monthNamesBn = ["জানুয়ারি", "ফেব্রুয়ারি", "মার্চ", "এপ্রিল", "মে", "জুন", "জুলাই", "আগস্ট", "সেপ্টেম্বর", "অক্টোবর", "নভেম্বর", "ডিসেম্বর"];
+            let rainbowIntervalId = null;
+            let confirmActionCallback = null;
+
+            function setPrimaryColorRGB() {
+                const primaryColorHex = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+                if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(primaryColorHex)) {
+                    let hex = primaryColorHex.substring(1);
+                    if (hex.length === 3) hex = hex.split('').map(char => char + char).join('');
+                    const r = parseInt(hex.substring(0, 2), 16);
+                    const g = parseInt(hex.substring(2, 4), 16);
+                    const b = parseInt(hex.substring(4, 6), 16);
+                    document.documentElement.style.setProperty('--rgb-primary-color', `${r},${g},${b}`);
+                }
+            }
+            setPrimaryColorRGB();
+
+            function autoExpandField(field) { /* ... আগের মতোই ... */ 
+                if (!field || typeof field.style === 'undefined') return;
+                field.style.height = 'auto';
+                let scrollHeight = field.scrollHeight;
+                let buffer = ((field.tagName.toLowerCase() === 'input' && field.type === 'text') || field.tagName.toLowerCase() === 'textarea') ? 5 : 0;
+                if (field.tagName.toLowerCase() === 'select') {
+                    if (scrollHeight < 56) scrollHeight = 56;
+                }
+                field.style.height = (scrollHeight + buffer) + 'px';
+            }
+
+            function setupAutoExpandListeners(parentElement = document) { /* ... আগের মতোই ... */ 
+                parentElement.querySelectorAll('input.auto-expand, textarea.auto-expand, select.auto-expand').forEach(field => {
+                    field.removeEventListener('input', handleAutoExpandInput);
+                    field.addEventListener('input', handleAutoExpandInput);
+                    if (field.tagName.toLowerCase() === 'select') {
+                        field.removeEventListener('change', handleAutoExpandInput);
+                        field.addEventListener('change', handleAutoExpandInput);
+                    }
+                    setTimeout(() => autoExpandField(field), 150);
+                });
+            }
+            function handleAutoExpandInput(event) { autoExpandField(event.target); }
+
+            function loadInitialData() {
+                try {
+                    const embeddedDataRaw = elements.appDataStoreScript.textContent;
+                    if (embeddedDataRaw && embeddedDataRaw.trim() !== "" && embeddedDataRaw.trim() !== "{}") {
+                        const parsedData = JSON.parse(embeddedDataRaw);
+                        if (parsedData) {
+                            masterAppData.users = (parsedData.users && typeof parsedData.users === 'object') ? parsedData.users : {};
+                            masterAppData.user_profiles = (parsedData.user_profiles && typeof parsedData.user_profiles === 'object') ? parsedData.user_profiles : {};
+                            
+                            Object.values(masterAppData.users).forEach(userDataContainer => {
+                                if (userDataContainer.data && userDataContainer.data.billingRecords) {
+                                    userDataContainer.data.billingRecords.forEach(rec => {
+                                        rec.confirmed = !!rec.confirmed; rec.hidden = !!rec.hidden;
+                                        if (typeof rec.currentCPaid === 'undefined') rec.currentCPaid = false;
+                                        if (typeof rec.currentCPaidAmount === 'undefined') rec.currentCPaidAmount = 0;
+                                        if (typeof rec.depositDate === 'undefined') rec.depositDate = null;
+                                        if (rec.prevArrearsH && typeof rec.prevArrearsH === 'string') rec.prevArrearsH = parseFloat(rec.prevArrearsH) || 0;
+                                    });
+                                }
+                            });
+                        }
+                    }
+                } catch (e) {
+                    console.error("Error loading/parsing embedded data:", e);
+                    masterAppData = { users: {}, user_profiles: {} };
+                }
+                // Load profile from localStorage if exists
+                const storedEmail = localStorage.getItem('bariVaraAppUserEmail');
+                if (storedEmail) {
+                    loggedInUserEmail = storedEmail;
+                    elements.profileEmailInput.value = storedEmail;
+                    elements.displayUserEmail.textContent = storedEmail;
+                    elements.loginProfileBtn.style.display = 'none';
+                    elements.logoutProfileBtn.style.display = 'inline-block';
+                    elements.cloudStatusIndicator.textContent = `(${storedEmail} এর সাথে সংযুক্ত)`;
+                }
+            }
+
+            function showView(viewToShow) {
+                [elements.initialView, elements.loginFormSection, elements.appContent, elements.adminDashboard, elements.userProfileSection].forEach(view => {
+                    if (view) view.style.display = 'none';
+                });
+                if (viewToShow) viewToShow.style.display = 'block';
+            }
+            
+            function resetLoginState() { /* ... আগের মতোই ... */ 
+                isAdminLoggedIn = false; currentTenantId = null; currentTenantLoginName = ''; currentTenantData = {};
+                if(elements.loginAdminUsernameInput) elements.loginAdminUsernameInput.value = '';
+                if(elements.loginPasswordInput) elements.loginPasswordInput.value = '';
+                if(elements.loginError) { elements.loginError.textContent = ''; elements.loginError.style.display = 'none';}
+                if(elements.registerError) { elements.registerError.textContent = ''; elements.registerError.style.display = 'none';}
+                stopRainbowEffect();
+                elements.loadDraftPrompt.style.display = 'none'; // Hide draft prompt
+            }
+
+            function showInitialView() {
+                showView(elements.initialView);
+                resetLoginState();
+                checkAndPromptForDraft(); // Check for draft when returning to initial view
+            }
+            
+            function showUserProfileView() {
+                showView(elements.userProfileSection);
+                setupAutoExpandListeners(elements.userProfileSection);
+            }
+
+            function showLoginForm() { /* ... আগের মতোই ... */ 
+                showView(elements.loginFormSection);
+                createLoginDropdown(); 
+                elements.loginAdminUsernameInput.value = '';
+                elements.loginPasswordInput.value = '';
+                elements.loginAdminUsernameInput.disabled = false;
+                elements.loginAdminUsernameInput.focus();
+                setupAutoExpandListeners(elements.loginFormSection);
+            }
+            
+            function createLoginDropdown() { /* ... আগের মতোই ... */ 
+                elements.loginUsernameDropdownContainer.innerHTML = '';
+                const selectEl = document.createElement('select');
+                selectEl.id = 'login-username-dropdown';
+                selectEl.className = 'auto-expand';
+                const defaultOption = document.createElement('option');
+                defaultOption.value = ""; defaultOption.textContent = "-- ভাড়াটিয়া নির্বাচন করুন --";
+                selectEl.appendChild(defaultOption);
+
+                if (masterAppData.users) {
+                    const sortedUserEntries = Object.entries(masterAppData.users)
+                        .filter(([id, user]) => user.loginName && user.loginName !== MASTER_USERNAME)
+                        .sort(([, userA], [, userB]) => (userA.loginName || "").localeCompare(userB.loginName || "", 'bn'));
+                    sortedUserEntries.forEach(([tenantId, userContainer]) => {
+                        const option = document.createElement('option');
+                        option.value = userContainer.loginName;
+                        option.textContent = userContainer.loginName;
+                        selectEl.appendChild(option);
+                    });
+                }
+                elements.loginUsernameDropdownContainer.appendChild(selectEl);
+                autoExpandField(selectEl);
+                selectEl.addEventListener('change', () => {
+                    if (selectEl.value) {
+                        elements.loginAdminUsernameInput.value = selectEl.value; 
+                        elements.loginAdminUsernameInput.disabled = true; 
+                    } else {
+                        elements.loginAdminUsernameInput.disabled = false;
+                    }
+                    autoExpandField(selectEl);
+                });
+            }
+
+            function showModal(modalElement) { /* ... আগের মতোই ... */ 
+                 if(modalElement) modalElement.style.display = 'block';
+                setupAutoExpandListeners(modalElement.querySelector('.modal-content'));
+            }
+            function hideModal(modalElement) { /* ... আগের মতোই ... */ 
+                if(modalElement) modalElement.style.display = 'none';
+            }
+            
+            document.querySelectorAll('.close-modal-btn, .btn[data-modal-id]').forEach(btn => { /* ... আগের মতোই ... */ 
+                btn.addEventListener('click', function() {
+                    const modalId = this.dataset.modalId;
+                    if (modalId) {
+                        const modalToClose = document.getElementById(modalId);
+                        if (modalToClose) hideModal(modalToClose);
+                    }
+                });
+            });
+
+            function showRegisterModal() { /* ... আগের মতোই ... */ 
+                showModal(elements.registerModal);
+                elements.registerUsernameInput.value = '';
+                elements.registerPasswordInput.value = '';
+                elements.registerConfirmPasswordInput.value = '';
+                elements.registerError.textContent = '';
+                elements.registerError.style.display = 'none';
+                elements.registerUsernameInput.focus();
+            }
+
+            function switchToAppView(fromDraft = false) {
+                showView(elements.appContent);
+                elements.displayTenantName.textContent = currentTenantLoginName;
+                if (!fromDraft) { // Only reset if not loading from draft
+                    // currentTenantData is already set by login or draft load
+                }
+                displayTenantInfo();
+                renderBillingRecords();
+                setupAutoExpandListeners(elements.appContent);
+                startRainbowEffect();
+            }
+
+            function switchToAdminDashboard() { /* ... আগের মতোই ... */ 
+                showView(elements.adminDashboard);
+                isAdminLoggedIn = true; 
+                populateAdminTenantList();
+                stopRainbowEffect();
+                setupAutoExpandListeners(elements.adminDashboard);
+            }
+            
+            function showConfirmationModal(title, message, callback) { /* ... আগের মতোই ... */ 
+                elements.confirmationModalTitle.textContent = title;
+                elements.confirmationModalMessage.innerHTML = message;
+                confirmActionCallback = callback;
+                showModal(elements.confirmationModal);
+            }
+
+            elements.confirmActionBtn.addEventListener('click', () => { /* ... আগের মতোই ... */ 
+                if (typeof confirmActionCallback === 'function') {
+                    confirmActionCallback();
+                }
+                hideModal(elements.confirmationModal);
+                confirmActionCallback = null;
+            });
+            
+            window.addEventListener('click', (event) => { /* ... আগের মতোই ... */ 
+                 if (event.target.classList.contains('modal')) {
+                    hideModal(event.target);
+                }
+            });
+            
+            // Profile/Cloud Connect Logic
+            if(elements.showUserProfileBtn) elements.showUserProfileBtn.addEventListener('click', showUserProfileView);
+            if(elements.profileBackToInitialBtn) elements.profileBackToInitialBtn.addEventListener('click', showInitialView); // নতুন যোগ করা হয়েছে
+
+            if(elements.loginProfileBtn) {
+                elements.loginProfileBtn.addEventListener('click', () => {
+                    const email = elements.profileEmailInput.value.trim();
+                    if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { // Basic email validation
+                        loggedInUserEmail = email;
+                        localStorage.setItem('bariVaraAppUserEmail', email);
+                        elements.displayUserEmail.textContent = email;
+                        elements.profileMessage.textContent = `"${email}" সফলভাবে সেট করা হয়েছে।`;
+                        elements.profileMessage.style.color = 'var(--success-color)';
+                        elements.profileMessage.style.display = 'block';
+                        elements.loginProfileBtn.style.display = 'none';
+                        elements.logoutProfileBtn.style.display = 'inline-block';
+                        elements.cloudStatusIndicator.textContent = `(${email} এর সাথে সংযুক্ত)`;
+                        if (masterAppData.user_profiles && masterAppData.user_profiles[email]) {
+                            alert(`"${email}" এর জন্য সংরক্ষিত ডেটা (যদি থাকে) লোড করার চেষ্টা করা হচ্ছে... (এই ফিচারটি এখন সিমুলেটেড)`);
+                        }
+
+                    } else {
+                        elements.profileMessage.textContent = 'সঠিক ইমেইল অ্যাড্রেস দিন।';
+                        elements.profileMessage.style.color = 'var(--danger-color)';
+                        elements.profileMessage.style.display = 'block';
+                    }
+                    autoExpandField(elements.profileEmailInput); // Expand after value change if needed
+                });
+            }
+            if(elements.logoutProfileBtn) {
+                elements.logoutProfileBtn.addEventListener('click', () => {
+                    loggedInUserEmail = null;
+                    localStorage.removeItem('bariVaraAppUserEmail');
+                    elements.profileEmailInput.value = '';
+                    elements.displayUserEmail.textContent = 'এখনও লগইন করা হয়নি';
+                    elements.profileMessage.textContent = 'প্রোফাইল লগআউট করা হয়েছে।';
+                    elements.profileMessage.style.color = 'var(--info-color)';
+                    elements.profileMessage.style.display = 'block';
+                    elements.loginProfileBtn.style.display = 'inline-block';
+                    elements.logoutProfileBtn.style.display = 'none';
+                    elements.cloudStatusIndicator.textContent = '';
+                    autoExpandField(elements.profileEmailInput); // Expand after value change
+                });
+            }
+
+
+            if (elements.showLoginFormBtn) elements.showLoginFormBtn.addEventListener('click', showLoginForm);
+            if (elements.showRegisterFormBtn) elements.showRegisterFormBtn.addEventListener('click', showRegisterModal);
+            if (elements.backToInitialViewFromLogin2) elements.backToInitialViewFromLogin2.addEventListener('click', showInitialView);
+            if (elements.adminBackToInitialViewBtn) elements.adminBackToInitialViewBtn.addEventListener('click', showInitialView);
+
+
+            if (elements.loginSubmitBtn) {
+                elements.loginSubmitBtn.addEventListener('click', () => {
+                    const loginUsernameDropdown = elements.loginUsernameDropdownContainer.querySelector('select');
+                    const dropdownName = loginUsernameDropdown ? loginUsernameDropdown.value : "";
+                    const manualName = elements.loginAdminUsernameInput.value.trim();
+                    const nameToLogin = dropdownName || manualName;
+                    const passwordOrCode = elements.loginPasswordInput.value;
+                    elements.loginError.textContent = ''; elements.loginError.style.display = 'none';
+
+                    if (!nameToLogin || !passwordOrCode) {
+                        elements.loginError.textContent = 'ব্যবহারকারীর নাম এবং পাসওয়ার্ড/কোড দিন।';
+                        elements.loginError.style.display = 'block'; return;
+                    }
+
+                    if (nameToLogin === MASTER_USERNAME && passwordOrCode === MASTER_PASSWORD) {
+                        isAdminLoggedIn = true; 
+                        switchToAdminDashboard(); return;
+                    }
+                    isAdminLoggedIn = false; 
+
+                    const tempTenantId = `tenant_${nameToLogin.toLowerCase().replace(/\s+/g, '_')}_${passwordOrCode}`;
+                    if (masterAppData.users && masterAppData.users[tempTenantId] && masterAppData.users[tempTenantId].loginName === nameToLogin) {
+                        currentTenantId = tempTenantId;
+                        currentTenantLoginName = masterAppData.users[tempTenantId].loginName;
+                        currentTenantData = JSON.parse(JSON.stringify(masterAppData.users[tempTenantId].data));
+                        switchToAppView();
+                        clearDraftData(currentTenantId); // Clear draft after successful login & load
+                    } else {
+                        elements.loginError.textContent = 'ব্যবহারকারীর নাম অথবা পাসওয়ার্ড/কোড সঠিক নয়। আবার চেষ্টা করুন।';
+                        elements.loginError.style.display = 'block';
+                    }
+                });
+            }
+
+            if (elements.registerSubmitBtn) { /* ... আগের মতোই, শুধু createLoginDropdown কল হবে ... */ 
+                elements.registerSubmitBtn.addEventListener('click', () => {
+                    const username = elements.registerUsernameInput.value.trim();
+                    const password = elements.registerPasswordInput.value;
+                    const confirmPassword = elements.registerConfirmPasswordInput.value;
+                    elements.registerError.textContent = ''; elements.registerError.style.display = 'none';
+
+                    if (!username || username.length < 3) { elements.registerError.textContent = 'ব্যবহারকারীর নাম কমপক্ষে ৩ অক্ষরের হতে হবে।'; elements.registerError.style.display = 'block'; return; }
+                    if (!password || password.length < 4) { elements.registerError.textContent = 'পাসওয়ার্ড কমপক্ষে ৪ অক্ষরের হতে হবে।'; elements.registerError.style.display = 'block'; return; }
+                    if (password !== confirmPassword) { elements.registerError.textContent = 'পাসওয়ার্ড দুটি মিলেনি।'; elements.registerError.style.display = 'block'; return; }
+                    
+                    const usernameExists = Object.values(masterAppData.users || {}).some(user => user.loginName.toLowerCase() === username.toLowerCase());
+                    if (usernameExists) {
+                        elements.registerError.textContent = 'এই ব্যবহারকারীর নামটি আগে থেকেই রয়েছে। অন্য নাম চেষ্টা করুন।';
+                        elements.registerError.style.display = 'block'; return;
+                    }
+
+                    const newTenantId = `tenant_${username.toLowerCase().replace(/\s+/g, '_')}_${password}`;
+                    if (username === MASTER_USERNAME) { elements.registerError.textContent = 'এই নামটি অ্যাডমিনের জন্য সংরক্ষিত। অন্য নাম চেষ্টা করুন।'; elements.registerError.style.display = 'block'; return; }
+
+                    if (!masterAppData.users) masterAppData.users = {};
+                    masterAppData.users[newTenantId] = {
+                        tenantId: newTenantId,
+                        loginName: username,
+                        data: initializeNewTenantDataStructure(username)
+                    };
+                    alert(`"${username}" নামে নতুন আইডি সফলভাবে তৈরি হয়েছে!\nগুরুত্বপূর্ণ: এই পরিবর্তনটি স্থায়ীভাবে সেভ করতে অ্যাডমিন হিসেবে লগইন করে নিচের "সকল ইউজারের ডেটা সহ এই অ্যাপটি ডাউনলোড করুন" বাটনে ক্লিক করুন।`);
+                    hideModal(elements.registerModal);
+                    showLoginForm(); // This will recreate dropdown
+                });
+            }
+
+            if (elements.adminLogoutBtn) { /* ... আগের মতোই ... */ 
+                elements.adminLogoutBtn.addEventListener('click', () => {
+                isAdminLoggedIn = false; 
+                showInitialView();
+                });
+            }
+
+            function populateAdminTenantList() { /* ... আগের মতোই ... */ 
+                elements.adminTenantList.innerHTML = '';
+                if (masterAppData.users) {
+                    const sortedUsers = Object.values(masterAppData.users)
+                        .filter(user => user.loginName !== MASTER_USERNAME)
+                        .sort((a,b) => (a.loginName || "").localeCompare(b.loginName || "", 'bn'));
+
+                    if (sortedUsers.length === 0) {
+                        const li = document.createElement('li');
+                        li.textContent = 'কোনো ভাড়াটিয়া নিবন্ধিত নেই।';
+                        li.className = 'note';
+                        elements.adminTenantList.appendChild(li);
+                        return;
+                    }
+
+                    sortedUsers.forEach(userContainer => {
+                        const li = document.createElement('li');
+                        li.className = 'tenant-list-item';
+                        const nameSpan = document.createElement('span');
+                        nameSpan.className = 'tenant-name-display';
+                        nameSpan.innerHTML = `<i class="icon-user"></i> ${userContainer.loginName}`;
+                        const actionsDiv = document.createElement('div');
+                        actionsDiv.className = 'actions';
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.type = "button";
+                        deleteBtn.className = 'btn btn-danger btn-small';
+                        deleteBtn.innerHTML = `<i class="icon-delete"></i> মুছুন`;
+                        deleteBtn.onclick = () => handleDeleteTenant(userContainer.tenantId, userContainer.loginName);
+                        actionsDiv.appendChild(deleteBtn);
+                        li.appendChild(nameSpan);
+                        li.appendChild(actionsDiv);
+                        elements.adminTenantList.appendChild(li);
+                    });
+                }
+            }
+
+            function handleDeleteTenant(tenantIdToDelete, tenantNameToDelete) { /* ... আগের মতোই, createLoginDropdown কল হবে ... */ 
+                 showConfirmationModal(
+                    'ভাড়াটিয়া মুছে ফেলুন',
+                    `আপনি কি নিশ্চিতভাবে ভাড়াটিয়া "<b>${tenantNameToDelete}</b>"-কে মুছে ফেলতে চান? এই কাজটি আনডু করা যাবে না।`,
+                    () => {
+                        if (masterAppData.users && masterAppData.users[tenantIdToDelete]) {
+                            delete masterAppData.users[tenantIdToDelete];
+                            localStorage.removeItem(`draft_${tenantIdToDelete}`); // Remove draft too
+                            populateAdminTenantList();
+                            createLoginDropdown(); 
+                            alert(`ভাড়াটিয়া "${tenantNameToDelete}" সফলভাবে মুছে ফেলা হয়েছে। পরিবর্তনগুলি স্থায়ী করতে অ্যাপটি সেভ করুন।`);
+                        } else {
+                            alert('ভাড়াটিয়া খুঁজে পাওয়া যায়নি।');
+                        }
+                    }
+                );
+            }
+            
+            if (elements.backToLoginBtn) elements.backToLoginBtn.addEventListener('click', showInitialView);
+
+            function initializeNewTenantDataStructure(loginName) { /* ... আগের মতোই ... */ 
+                 return {
+                    info: { name: loginName, mobile: '', meter: '', customerId: '', advance: '', nid: '', defaultRent: '', defaultGas: '' },
+                    billingRecords: []
+                };
+            }
+
+            function displayTenantInfo() { /* ... আগের মতোই ... */ 
+                const info = currentTenantData.info || initializeNewTenantDataStructure(currentTenantLoginName).info;
+                elements.tenantNameInput.value = info.name || currentTenantLoginName;
+                elements.tenantMobileInput.value = info.mobile || '';
+                elements.tenantMeterInput.value = info.meter || '';
+                elements.tenantCustomerIdInput.value = info.customerId || '';
+                elements.tenantAdvanceInput.value = info.advance || '';
+                elements.tenantNidInput.value = info.nid || '';
+                elements.defaultRentInput.value = info.defaultRent || '';
+                elements.defaultGasInput.value = info.defaultGas || '';
+                [elements.tenantNameInput, elements.tenantMobileInput, elements.tenantMeterInput, elements.tenantCustomerIdInput, elements.tenantAdvanceInput, elements.tenantNidInput, elements.defaultRentInput, elements.defaultGasInput].forEach(field => {
+                    if (field) setTimeout(() => autoExpandField(field), 120);
+                });
+            }
+
+            function collectTenantInfoFromForm() { /* ... আগের মতোই ... */ 
+                if (!currentTenantData.info) currentTenantData.info = {};
+                currentTenantData.info.name = elements.tenantNameInput.value || currentTenantLoginName;
+                currentTenantData.info.mobile = elements.tenantMobileInput.value.trim();
+                currentTenantData.info.meter = elements.tenantMeterInput.value.trim();
+                currentTenantData.info.customerId = elements.tenantCustomerIdInput.value.trim();
+                currentTenantData.info.advance = elements.tenantAdvanceInput.value.trim();
+                currentTenantData.info.nid = elements.tenantNidInput.value.trim();
+                currentTenantData.info.defaultRent = elements.defaultRentInput.value.trim();
+                currentTenantData.info.defaultGas = elements.defaultGasInput.value.trim();
+            }
+
+            function renderBillingRecords() { /* ... আগের মতোই, addBillingCard এ index পাস হবে ... */ 
+                if (!elements.billingRecordsContainer) return;
+                elements.billingRecordsContainer.innerHTML = '';
+                if (!currentTenantData.billingRecords) currentTenantData.billingRecords = [];
+                
+                currentTenantData.billingRecords.sort((a, b) => {
+                    if ((a.year || 0) !== (b.year || 0)) return (a.year || 0) - (b.year || 0);
+                    return (a.month || 0) - (b.month || 0);
+                });
+
+                if (currentTenantData.billingRecords.length > 0) {
+                    currentTenantData.billingRecords.forEach((record, index) => addBillingCard(record, index)); // Pass index
+                    if (elements.noRecordsMessage) elements.noRecordsMessage.style.display = 'none';
+                } else {
+                    if (elements.noRecordsMessage) elements.noRecordsMessage.style.display = 'block';
+                }
+                updateAllCalculationsAndUI();
+                setupAutoExpandListeners(elements.billingRecordsContainer);
+            }
+
+            function populateMonthYearSelectors() { /* ... আগের মতোই ... */ 
+                elements.newBillYearSelect.innerHTML = '';
+                elements.newBillMonthSelect.innerHTML = '';
+                const currentSystemYear = new Date().getFullYear();
+                for (let y = currentSystemYear - 3; y <= currentSystemYear + 5; y++) {
+                    const option = document.createElement('option');
+                    option.value = y; option.textContent = y;
+                    elements.newBillYearSelect.appendChild(option);
+                }
+                monthNamesBn.forEach((name, index) => {
+                    const option = document.createElement('option');
+                    option.value = index + 1; option.textContent = name;
+                    elements.newBillMonthSelect.appendChild(option);
+                });
+                let defaultYear = currentSystemYear;
+                let defaultMonth = new Date().getMonth() + 1;
+                if (currentTenantData.billingRecords && currentTenantData.billingRecords.length > 0) {
+                    const sortedRecords = [...currentTenantData.billingRecords].sort((a,b) => (a.year*100 + a.month) - (b.year*100 + b.month));
+                    const lastRecord = sortedRecords[sortedRecords.length - 1];
+                    if (lastRecord && lastRecord.year && lastRecord.month) {
+                        defaultMonth = parseInt(lastRecord.month) + 1; 
+                        defaultYear = parseInt(lastRecord.year);
+                        if (defaultMonth > 12) { defaultMonth = 1; defaultYear++; }
+                    }
+                }
+                elements.newBillYearSelect.value = defaultYear;
+                elements.newBillMonthSelect.value = defaultMonth;
+                autoExpandField(elements.newBillYearSelect);
+                autoExpandField(elements.newBillMonthSelect);
+            }
+            
+            if (elements.addMonthBtn) { /* ... আগের মতোই ... */ 
+                elements.addMonthBtn.addEventListener('click', () => {
+                    populateMonthYearSelectors();
+                    elements.addMonthError.style.display = 'none';
+                    showModal(elements.addMonthModal);
+                });
+            }
+
+            if (elements.confirmAddMonthBtn) { /* ... আগের মতোই, prevArrearsH সেট হবে ... */ 
+                elements.confirmAddMonthBtn.addEventListener('click', () => {
+                    const year = parseInt(elements.newBillYearSelect.value);
+                    const month = parseInt(elements.newBillMonthSelect.value);
+                    elements.addMonthError.style.display = 'none';
+
+                    if (isNaN(year) || isNaN(month)) { elements.addMonthError.textContent = 'বছর এবং মাস সঠিকভাবে নির্বাচন করুন।'; elements.addMonthError.style.display = 'block'; return; }
+                    if (year > (new Date().getFullYear() + 10)) { elements.addMonthError.textContent = 'ভবিষ্যতের অনেক দুরের বছর নির্বাচন করা যাবে না।'; elements.addMonthError.style.display = 'block'; return; }
+                    const recordExists = currentTenantData.billingRecords.some(r => r.year === year && r.month === month);
+                    if (recordExists) { elements.addMonthError.textContent = 'এই মাসের বিল ইতিমধ্যে যোগ করা হয়েছে।'; elements.addMonthError.style.display = 'block'; return; }
+                    
+                    let initialPrevArrears = 0;
+                    if (currentTenantData.billingRecords && currentTenantData.billingRecords.length > 0) {
+                        const lastSortedRecord = [...currentTenantData.billingRecords].sort((a,b) => (a.year*100 + a.month) - (b.year*100 + b.month)).pop();
+                        initialPrevArrears = lastSortedRecord.newArrearsG || 0;
+                    }
+
+                    const newRecord = {
+                        id: 'record_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                        year: year, month: month,
+                        rentA: parseFloat(elements.defaultRentInput.value) || 0,
+                        gasB: parseFloat(elements.defaultGasInput.value) || 0,
+                        currentC: 0, currentCPaidAmount: 0, currentCPaid: false,
+                        vatD: 0, 
+                        prevArrearsH: initialPrevArrears, 
+                        depositF: 0, depositDate: null, comment: '',
+                        confirmed: false, hidden: false
+                    };
+                    currentTenantData.billingRecords.push(newRecord);
+                    renderBillingRecords(); // This will sort and display
+                    const newCardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${newRecord.id}"]`);
+                    if (newCardElement) {
+                        setupAutoExpandListeners(newCardElement);
+                        newCardElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    hideModal(elements.addMonthModal);
+                });
+            }
+
+            function addBillingCard(record, index) { /* ... আগের মতোই, prevArrearsH এর readonly লজিক আপডেট হবে ... */ 
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'billing-record-card';
+                if (record.confirmed) cardDiv.classList.add('confirmed');
+                cardDiv.dataset.id = record.id;
+                const cardHeader = document.createElement('div'); cardHeader.className = 'card-header';
+                const title = document.createElement('h4');
+                const monthName = monthNamesBn[(record.month || 1) - 1] || `মাস ${record.month}`;
+                title.textContent = `বিল: ${monthName}, ${record.year}`;
+                const cardActionsDiv = document.createElement('div'); cardActionsDiv.className = 'card-actions';
+                const toggleBtn = document.createElement('button'); toggleBtn.type = "button"; toggleBtn.className = 'btn btn-secondary btn-small toggle-content-btn'; toggleBtn.innerHTML = record.hidden ? '<i class="icon-view"></i> দেখুন' : '<i class="icon-hide"></i> হাইড'; toggleBtn.onclick = () => toggleCardContent(record.id); cardActionsDiv.appendChild(toggleBtn);
+                const confirmBtn = document.createElement('button'); confirmBtn.type = "button"; confirmBtn.className = `btn btn-small ${record.confirmed ? 'btn-info' : 'btn-warning'} confirm-record-btn`; confirmBtn.innerHTML = record.confirmed ? '<i class="icon-edit"></i> এডিট করুন' : '<i class="icon-confirm"></i> কনফার্ম'; confirmBtn.onclick = () => toggleConfirmRecord(record.id); cardActionsDiv.appendChild(confirmBtn);
+                const deleteBtn = document.createElement('button'); deleteBtn.type = "button"; deleteBtn.className = 'btn btn-danger btn-small delete-record-btn'; deleteBtn.innerHTML = '<i class="icon-delete"></i> মুছুন'; deleteBtn.onclick = () => handleDeleteRecord(record.id, `${monthName}, ${record.year}`); cardActionsDiv.appendChild(deleteBtn);
+                cardHeader.appendChild(title); cardHeader.appendChild(cardActionsDiv); cardDiv.appendChild(cardHeader);
+                const cardContent = document.createElement('div'); cardContent.className = 'card-content';
+                if (record.hidden) cardContent.classList.add('hidden');
+
+                function createFormGroup(label, inputType, className, value, placeholder, isReadonly = false, metaInfo = null, specialClass = '') {
+                    const fg = document.createElement('div'); fg.className = `form-group ${specialClass}`;
+                    const lbl = document.createElement('label'); lbl.textContent = label + ':';
+                    const inputWrapper = document.createElement('div'); inputWrapper.className = metaInfo ? 'input-with-meta' : '';
+                    const input = document.createElement(inputType === 'textarea' ? 'textarea' : 'input');
+                    if (inputType !== 'textarea') input.type = inputType;
+                    input.className = `${className} auto-expand`; input.value = value;
+                    if (placeholder) input.placeholder = placeholder;
+                    if (inputType === 'number') input.step = "0.01";
+                    input.readOnly = isReadonly;
+                    if (isReadonly && !input.classList.contains('prevArrearsH')) { 
+                        input.classList.add('readonly-calc-field');
+                    }
+                    if (record.confirmed) {
+                        if (!(input.classList.contains('prevArrearsH') && index === 0 && !isReadonly)) { 
+                             input.classList.add('confirmed-input');
+                        }
+                    }
+                    inputWrapper.appendChild(input); if (metaInfo) { inputWrapper.appendChild(metaInfo); }
+                    fg.appendChild(lbl); fg.appendChild(inputWrapper); return fg;
+                }
+                
+                cardContent.appendChild(createFormGroup('ভাড়া (A)', 'number', 'rentA', record.rentA || 0, '0.00', record.confirmed));
+                cardContent.appendChild(createFormGroup('গ্যাস (B)', 'number', 'gasB', record.gasB || 0, '0.00', record.confirmed));
+                cardContent.appendChild(createFormGroup('কারেন্ট বিল (C)', 'number', 'currentC', record.currentC || 0, '0.00', record.confirmed));
+                const currentPaidAmountGroup = document.createElement('div'); 
+                currentPaidAmountGroup.className = `form-group currentC-paid-amount-group ${record.currentCPaid ? 'paid' : 'not-paid'}`;
+                const currentPaidLabel = document.createElement('label'); currentPaidLabel.textContent = 'কারেন্ট বিল জমা (যদি থাকে):';
+                const currentPaidInputWrapper = document.createElement('div'); currentPaidInputWrapper.className = 'input-with-meta';
+                const currentPaidInput = document.createElement('input'); currentPaidInput.type = 'number'; currentPaidInput.step = "0.01"; currentPaidInput.className = 'currentCPaidAmount auto-expand'; currentPaidInput.value = record.currentCPaidAmount || 0; currentPaidInput.placeholder = '0.00'; currentPaidInput.readOnly = record.confirmed || record.currentCPaid;
+                const currentPaidBtn = document.createElement('button'); currentPaidBtn.type = "button"; currentPaidBtn.className = `btn btn-small ${record.currentCPaid ? 'btn-success' : 'btn-danger'} currentC-paid-btn`; currentPaidBtn.textContent = record.currentCPaid ? 'পরিশোধিত' : 'পরিশোধ করুন'; currentPaidBtn.disabled = record.confirmed;
+                currentPaidBtn.onclick = () => { 
+                    if (record.confirmed && !record.currentCPaid && !record.currentCPaidAmount > 0) return; 
+                    record.currentCPaid = !record.currentCPaid;
+                    if (record.currentCPaid && (currentPaidInput.value === "0" || !currentPaidInput.value)) { currentPaidInput.value = record.currentC || 0; }
+                    record.currentCPaidAmount = parseFloat(currentPaidInput.value) || 0;
+                    updateSingleCardUI(record.id); updateAllCalculationsAndUI();
+                };
+                currentPaidInputWrapper.appendChild(currentPaidInput); currentPaidInputWrapper.appendChild(currentPaidBtn);
+                currentPaidAmountGroup.appendChild(currentPaidLabel); currentPaidAmountGroup.appendChild(currentPaidInputWrapper);
+                cardContent.appendChild(currentPaidAmountGroup);
+
+                cardContent.appendChild(createFormGroup('ভ্যাট (D)', 'number', 'vatD', record.vatD || 0, '0.00', record.confirmed));
+                cardContent.appendChild(createFormGroup('সাব-টোটাল (X = A+B+C+D)', 'number', 'subTotalX', 0, '', true));
+                
+                const isPrevArrearsHFieldReadOnly = index > 0 || record.confirmed;
+                cardContent.appendChild(createFormGroup('পূর্বের বকেয়া (H)', 'number', 'prevArrearsH', record.prevArrearsH || 0, '0.00', isPrevArrearsHFieldReadOnly));
+
+                const totalAmountT_FG = createFormGroup('মোট প্রদেয় (T = X+H)', 'number', 'totalAmountT-field', 0, '', true); cardContent.appendChild(totalAmountT_FG);
+                const depositDateSpan = document.createElement('span'); depositDateSpan.className = 'input-meta-info deposit-date-display'; depositDateSpan.textContent = record.depositDate ? `(${new Date(record.depositDate).toLocaleDateString('bn-BD', { day: '2-digit', month: '2-digit', year: 'numeric' })})` : '(জমার তারিখ)';
+                const depositF_FG = createFormGroup('মোট জমা (F)', 'number', 'depositF', record.depositF || 0, '0.00', record.confirmed, depositDateSpan, 'depositF-group');
+                if (record.depositF > 0) depositF_FG.classList.add('has-deposit'); else depositF_FG.classList.remove('has-deposit');
+                cardContent.appendChild(depositF_FG);
+                cardContent.appendChild(createFormGroup('নতুন বকেয়া/অগ্রিম (G = T-F)', 'number', 'newArrearsG', 0, '', true));
+                cardContent.appendChild(createFormGroup('মন্তব্য', 'textarea', 'comment', record.comment || '', 'আপনার মন্তব্য লিখুন (যদি থাকে)', record.confirmed));
+                const statusDiv = document.createElement('div'); statusDiv.className = 'status-display'; cardContent.appendChild(statusDiv);
+                cardDiv.appendChild(cardContent); elements.billingRecordsContainer.appendChild(cardDiv);
+                cardDiv.querySelectorAll('input:not([readonly]), textarea:not([readonly])').forEach(input => {
+                    input.addEventListener('input', (event) => handleCardInputChange(event, record.id, index));
+                    input.addEventListener('change', (event) => handleCardInputChange(event, record.id, index));
+                });
+                setupAutoExpandListeners(cardDiv);
+            }
+            
+            function updateSingleCardUI(recordId) { /* ... আগের মতোই, prevArrearsH এর readonly লজিক আপডেট হবে ... */ 
+                const record = currentTenantData.billingRecords.find(r => r.id === recordId);
+                if (!record) return;
+                const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${recordId}"]`);
+                if (!cardElement) return;
+                const recordIndex = currentTenantData.billingRecords.findIndex(r => r.id === recordId);
+
+                const currentPaidGroup = cardElement.querySelector('.currentC-paid-amount-group');
+                if (currentPaidGroup) { 
+                    currentPaidGroup.classList.toggle('paid', !!record.currentCPaid); 
+                    currentPaidGroup.classList.toggle('not-paid', !record.currentCPaid);
+                    const paidBtn = currentPaidGroup.querySelector('.currentC-paid-btn');
+                    if(paidBtn){
+                         paidBtn.textContent = record.currentCPaid ? 'পরিশোধিত' : 'পরিশোধ করুন';
+                         paidBtn.className = `btn btn-small ${record.currentCPaid ? 'btn-success' : 'btn-danger'} currentC-paid-btn`;
+                         paidBtn.disabled = record.confirmed;
+                    }
+                    const paidInput = cardElement.querySelector('.currentCPaidAmount');
+                    if (paidInput) {
+                        paidInput.value = record.currentCPaidAmount || 0;
+                        paidInput.readOnly = record.confirmed || record.currentCPaid;
+                    }
+                } 
+
+                const depositFG = cardElement.querySelector('.depositF-group');
+                const dateDisplay = cardElement.querySelector('.deposit-date-display');
+                if (depositFG) depositFG.classList.toggle('has-deposit', record.depositF > 0);
+                if (dateDisplay) dateDisplay.textContent = record.depositDate ? `(${new Date(record.depositDate).toLocaleDateString('bn-BD', { day: '2-digit', month: '2-digit', year: 'numeric' })})` : '(জমার তারিখ)';
+                
+                cardElement.querySelectorAll('input:not(.readonly-calc-field):not(.currentCPaidAmount), textarea').forEach(inputEl => {
+                    const isPrevArrearsField = inputEl.classList.contains('prevArrearsH');
+                    let makeReadOnly = record.confirmed;
+                    if (isPrevArrearsField) {
+                        makeReadOnly = recordIndex > 0 || record.confirmed; 
+                    }
+                    inputEl.readOnly = makeReadOnly;
+                    if (makeReadOnly) inputEl.classList.add('confirmed-input');
+                    else inputEl.classList.remove('confirmed-input');
+                });
+                 const prevArrearsHField = cardElement.querySelector('.prevArrearsH');
+                 if (prevArrearsHField) {
+                    prevArrearsHField.readOnly = recordIndex > 0 || record.confirmed;
+                    if(prevArrearsHField.readOnly) {
+                        if (recordIndex > 0) prevArrearsHField.classList.add('readonly-calc-field'); 
+                        else prevArrearsHField.classList.add('confirmed-input'); 
+                        prevArrearsHField.classList.remove(recordIndex > 0 ? 'confirmed-input': 'readonly-calc-field');
+                    } else {
+                        prevArrearsHField.classList.remove('readonly-calc-field', 'confirmed-input');
+                    }
+                 }
+
+                const confirmBtn = cardElement.querySelector('.confirm-record-btn');
+                if (confirmBtn) { 
+                    confirmBtn.innerHTML = record.confirmed ? '<i class="icon-edit"></i> এডিট করুন' : '<i class="icon-confirm"></i> কনফার্ম';
+                    confirmBtn.className = `btn btn-small ${record.confirmed ? 'btn-info' : 'btn-warning'} confirm-record-btn`;
+                } 
+                cardElement.classList.toggle('confirmed', record.confirmed);
+            }
+
+            function toggleCardContent(recordId) { 
+                const record = currentTenantData.billingRecords.find(r => r.id === recordId);
+                if (!record) return;
+                record.hidden = !record.hidden;
+                const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${recordId}"]`);
+                if (cardElement) {
+                    const content = cardElement.querySelector('.card-content');
+                    const toggleBtn = cardElement.querySelector('.toggle-content-btn');
+                    if (content) content.classList.toggle('hidden', record.hidden);
+                    if (toggleBtn) toggleBtn.innerHTML = record.hidden ? '<i class="icon-view"></i> দেখুন' : '<i class="icon-hide"></i> হাইড';
+                }
+            }
+
+            function toggleConfirmRecord(recordId) { 
+                const record = currentTenantData.billingRecords.find(r => r.id === recordId);
+                if (!record) return;
+                const recordIndex = currentTenantData.billingRecords.findIndex(r => r.id === recordId);
+                
+                if (!record.confirmed) { 
+                    const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${recordId}"]`);
+                    if (cardElement) {
+                        record.rentA = parseFloat(cardElement.querySelector('.rentA').value) || 0;
+                        record.gasB = parseFloat(cardElement.querySelector('.gasB').value) || 0;
+                        record.currentC = parseFloat(cardElement.querySelector('.currentC').value) || 0;
+                        record.vatD = parseFloat(cardElement.querySelector('.vatD').value) || 0;
+                        if (recordIndex === 0) { // prevArrearsH only editable for first record before confirmation
+                           record.prevArrearsH = parseFloat(cardElement.querySelector('.prevArrearsH').value) || 0;
+                        }
+                        record.depositF = parseFloat(cardElement.querySelector('.depositF').value) || 0;
+                        record.comment = cardElement.querySelector('.comment').value.trim();
+                        if (record.depositF > 0 && !record.depositDate) record.depositDate = new Date().toISOString();
+                    }
+                }
+                record.confirmed = !record.confirmed;
+                updateSingleCardUI(recordId); 
+                updateAllCalculationsAndUI(); 
+            }
+
+            function handleCardInputChange(event, recordId, index) { 
+                const record = currentTenantData.billingRecords.find(r => r.id === recordId);
+                const isPrevArrearsFirstRecordNotConfirmed = event.target.classList.contains('prevArrearsH') && index === 0 && !record.confirmed;
+
+                if (!record || (record.confirmed && !isPrevArrearsFirstRecordNotConfirmed) ) { // If record confirmed, only allow prevArrearsH for first UNCONFIRMED record
+                     return;
+                }
+
+                const target = event.target;
+                const fieldClass = target.classList[0];
+                let value = target.type === 'number' ? parseFloat(target.value) : target.value;
+                if (target.type === 'number' && isNaN(value)) value = 0;
+
+                switch (fieldClass) {
+                    case 'rentA': record.rentA = value; break;
+                    case 'gasB': record.gasB = value; break;
+                    case 'currentC': record.currentC = value; break;
+                    case 'currentCPaidAmount': record.currentCPaidAmount = value; if (value > 0 && !record.currentCPaid) record.currentCPaid = true; break;
+                    case 'vatD': record.vatD = value; break;
+                    case 'prevArrearsH': if (index === 0 && !record.confirmed) record.prevArrearsH = value; break; 
+                    case 'depositF': record.depositF = value; if (record.depositF > 0 && !record.depositDate) record.depositDate = new Date().toISOString(); break;
+                    case 'comment': record.comment = value.trim(); break;
+                }
+                updateAllCalculationsAndUI();
+                 // Update the specific field's UI in case of auto-calculation overwriting focused input
+                if (target.type === 'number') { setTimeout(() => autoExpandField(target),50); }
+                else { setTimeout(() => autoExpandField(target),50); }
+            }
+
+            function handleDeleteRecord(recordId, recordIdentifier) { 
+                showConfirmationModal('রেকর্ড মুছুন', `আপনি কি "${recordIdentifier}" বিলটি নিশ্চিতভাবে মুছে ফেলতে চান?`, () => {
+                    currentTenantData.billingRecords = currentTenantData.billingRecords.filter(r => r.id !== recordId);
+                    renderBillingRecords();
+                });
+            }
+            
+            function updateAllCalculationsAndUI() { 
+                if (!currentTenantData.billingRecords || currentTenantData.billingRecords.length === 0) {
+                    if (elements.noRecordsMessage) elements.noRecordsMessage.style.display = 'block';
+                    return;
+                }
+                if (elements.noRecordsMessage) elements.noRecordsMessage.style.display = 'none';
+
+                currentTenantData.billingRecords.sort((a, b) => {
+                    if ((a.year || 0) !== (b.year || 0)) return (a.year || 0) - (b.year || 0);
+                    return (a.month || 0) - (b.month || 0);
+                });
+
+                currentTenantData.billingRecords.forEach((record, index) => {
+                    if (index > 0) { 
+                        record.prevArrearsH = currentTenantData.billingRecords[index - 1].newArrearsG || 0;
+                    } 
+                    else if (typeof record.prevArrearsH !== 'number' || isNaN(record.prevArrearsH)) {
+                        record.prevArrearsH = 0;
+                    }
+
+                    const rentA = record.rentA || 0;
+                    const gasB = record.gasB || 0;
+                    const currentC = record.currentC || 0;
+                    const vatD = record.vatD || 0;
+                    const depositF = record.depositF || 0;
+                    const prevArrearsHVal = record.prevArrearsH || 0; 
+
+                    const subTotalX = rentA + gasB + currentC + vatD;
+                    const totalAmountT = subTotalX + prevArrearsHVal;
+                    const newArrearsG = totalAmountT - depositF;
+
+                    record.subTotalX = subTotalX;
+                    record.totalAmountT = totalAmountT;
+                    record.newArrearsG = newArrearsG;
+
+                    const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${record.id}"]`);
+                    if (cardElement) {
+                        const updateIfNotFocused = (el, val, isNumber = true) => {
+                            if (el && !el.matches(':focus')) {
+                                el.value = isNumber ? (val || 0).toFixed(2) : (val || '');
+                            } else if (el && el.matches(':focus') && isNumber && el.value !== (val || 0).toFixed(2) && el.value !== String(val)) {
+                                // User is typing, don't overwrite
+                            }
+                        };
+
+                        updateIfNotFocused(cardElement.querySelector('.rentA'), rentA);
+                        updateIfNotFocused(cardElement.querySelector('.gasB'), gasB);
+                        updateIfNotFocused(cardElement.querySelector('.currentC'), currentC);
+                        updateIfNotFocused(cardElement.querySelector('.vatD'), vatD);
+                        updateIfNotFocused(cardElement.querySelector('.depositF'), depositF);
+                        updateIfNotFocused(cardElement.querySelector('.comment'), record.comment, false);
+                        updateIfNotFocused(cardElement.querySelector('.currentCPaidAmount'), record.currentCPaidAmount);
+
+                        const prevArrearsHEl = cardElement.querySelector('.prevArrearsH');
+                        if (prevArrearsHEl) {
+                            prevArrearsHEl.readOnly = index > 0 || record.confirmed;
+                            if (index > 0 || record.confirmed) { 
+                                prevArrearsHEl.value = prevArrearsHVal.toFixed(2);
+                                if(index > 0) prevArrearsHEl.classList.add('readonly-calc-field'); else prevArrearsHEl.classList.add('confirmed-input');
+                                prevArrearsHEl.classList.remove(index > 0 ? 'confirmed-input': 'readonly-calc-field');
+                            } else { 
+                                if(!prevArrearsHEl.matches(':focus')) prevArrearsHEl.value = prevArrearsHVal.toFixed(2);
+                                prevArrearsHEl.classList.remove('readonly-calc-field', 'confirmed-input');
+                            }
+                        }
+
+                        const subTotalXEl = cardElement.querySelector('.subTotalX'); if (subTotalXEl) subTotalXEl.value = subTotalX.toFixed(2);
+                        const totalAmountTEl = cardElement.querySelector('.totalAmountT-field'); if (totalAmountTEl) totalAmountTEl.value = totalAmountT.toFixed(2);
+                        const newArrearsGEl = cardElement.querySelector('.newArrearsG'); if (newArrearsGEl) newArrearsGEl.value = newArrearsG.toFixed(2);
+                        
+                        const depositFG = cardElement.querySelector('.depositF-group'); if(depositFG) depositFG.classList.toggle('has-deposit', record.depositF > 0);
+                        const dateDisplay = cardElement.querySelector('.deposit-date-display'); if(dateDisplay) dateDisplay.textContent = record.depositDate ? `(${new Date(record.depositDate).toLocaleDateString('bn-BD', { day: '2-digit', month: '2-digit', year: 'numeric' })})` : '(জমার তারিখ)';
+                        const currentPaidGroup = cardElement.querySelector('.currentC-paid-amount-group');  
+                        if (currentPaidGroup) {
+                            currentPaidGroup.classList.toggle('paid', !!record.currentCPaid); currentPaidGroup.classList.toggle('not-paid', !record.currentCPaid);
+                            const paidBtn = currentPaidGroup.querySelector('.currentC-paid-btn'); if (paidBtn) { paidBtn.textContent = record.currentCPaid ? 'পরিশোধিত' : 'পরিশোধ করুন'; paidBtn.className = `btn btn-small ${record.currentCPaid ? 'btn-success' : 'btn-danger'} currentC-paid-btn`; paidBtn.disabled = record.confirmed; }
+                            const paidInput = cardElement.querySelector('.currentCPaidAmount'); if (paidInput) { updateIfNotFocused(paidInput, record.currentCPaidAmount); paidInput.readOnly = record.confirmed || record.currentCPaid; }
+                        }
+                        const monthName = monthNamesBn[(record.month || 1) - 1] || `মাস ${record.month}`;
+                        const titleEl = cardElement.querySelector('.card-header h4'); if (titleEl) titleEl.textContent = `বিল: ${monthName}, ${record.year}`;
+                        const statusDiv = cardElement.querySelector('.status-display');  
+                        if (statusDiv) {
+                            statusDiv.className = 'status-display';
+                            if (totalAmountT === 0 && depositF === 0 && prevArrearsHVal === 0 && subTotalX === 0 && !record.confirmed) { statusDiv.textContent = 'অমীমাংসিত'; statusDiv.classList.add('status-pending'); }
+                            else if (Math.abs(newArrearsG) < 0.01 && (record.depositF >= totalAmountT || totalAmountT === 0) && (totalAmountT > 0 || depositF > 0 || record.confirmed) ) { statusDiv.textContent = 'পরিশোধিত'; statusDiv.classList.add('status-paid'); }
+                            else if (newArrearsG > 0.009) { statusDiv.textContent = `বকেয়া: ${newArrearsG.toFixed(2)} টাকা`; statusDiv.classList.add('status-due'); }
+                            else if (newArrearsG < -0.009) { statusDiv.textContent = `অগ্রিম: ${Math.abs(newArrearsG).toFixed(2)} টাকা`; statusDiv.classList.add('status-advance'); }
+                            else { statusDiv.textContent = record.confirmed ? 'হিসাব সম্পন্ন' : 'অমীমাংসিত'; statusDiv.classList.add(record.confirmed ? 'status-paid' : 'status-pending'); }
+                        }
+                        cardElement.querySelectorAll('.auto-expand').forEach(field => setTimeout(() => autoExpandField(field), 70));
+                    }
+                });
+            }
+
+            // Draft Saving Logic
+            if(elements.saveDraftBtn) {
+                elements.saveDraftBtn.addEventListener('click', () => {
+                    if (!currentTenantId) {
+                        alert("খসড়া সেভ করার জন্য আগে একজন ভাড়াটিয়াকে লগইন করতে হবে।");
+                        return;
+                    }
+                    collectTenantInfoFromForm(); 
+                    currentTenantData.billingRecords.forEach((record, index) => {
+                        const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${record.id}"]`);
+                        if (cardElement && !record.confirmed) { 
+                            record.rentA = parseFloat(cardElement.querySelector('.rentA').value) || 0;
+                            record.gasB = parseFloat(cardElement.querySelector('.gasB').value) || 0;
+                            record.currentC = parseFloat(cardElement.querySelector('.currentC').value) || 0;
+                            record.vatD = parseFloat(cardElement.querySelector('.vatD').value) || 0;
+                            if (index === 0) { 
+                                record.prevArrearsH = parseFloat(cardElement.querySelector('.prevArrearsH').value) || 0;
+                            }
+                            record.depositF = parseFloat(cardElement.querySelector('.depositF').value) || 0;
+                            record.comment = cardElement.querySelector('.comment').value.trim();
+                        }
+                    });
+
+                    const draftData = {
+                        tenantId: currentTenantId,
+                        loginName: currentTenantLoginName,
+                        data: JSON.parse(JSON.stringify(currentTenantData)) 
+                    };
+                    localStorage.setItem(`draft_${currentTenantId}`, JSON.stringify(draftData));
+                    alert(`"${currentTenantLoginName}" এর জন্য খসড়া সফলভাবে সেভ হয়েছে।`);
+                });
+            }
+
+            function checkAndPromptForDraft() {
+                let foundDraftKey = null;
+                for (let i = 0; i < localStorage.length; i++) {
+                    if (localStorage.key(i).startsWith('draft_')) {
+                        foundDraftKey = localStorage.key(i);
+                        break;
+                    }
+                }
+
+                if (foundDraftKey) {
+                    try {
+                        const draft = JSON.parse(localStorage.getItem(foundDraftKey));
+                        if (draft && draft.loginName) {
+                            elements.draftUserNameSpan.textContent = draft.loginName;
+                            elements.loadDraftPrompt.style.display = 'block';
+                            elements.confirmLoadDraftBtn.onclick = () => {
+                                currentTenantId = draft.tenantId;
+                                currentTenantLoginName = draft.loginName;
+                                currentTenantData = draft.data; 
+                                switchToAppView(true); 
+                                elements.loadDraftPrompt.style.display = 'none';
+                            };
+                            elements.cancelLoadDraftBtn.onclick = () => {
+                                localStorage.removeItem(foundDraftKey); 
+                                elements.loadDraftPrompt.style.display = 'none';
+                                alert("খসড়া বাতিল করা হয়েছে।");
+                            };
+                        } else { localStorage.removeItem(foundDraftKey); } 
+                    } catch (e) {
+                        console.error("Error parsing draft:", e);
+                        localStorage.removeItem(foundDraftKey); 
+                    }
+                }
+            }
+            
+            function clearDraftData(tenantId) {
+                localStorage.removeItem(`draft_${tenantId}`);
+            }
+
+            // Cloud Save (JSON Export)
+            if(elements.saveToCloudBtn) {
+                elements.saveToCloudBtn.addEventListener('click', () => {
+                    if (!currentTenantId) {
+                        alert("প্রথমে একজন ভাড়াটিয়াকে লগইন করুন।");
+                        return;
+                    }
+                    if (!loggedInUserEmail) {
+                        alert("ক্লাউডে সেভ করার জন্য প্রথমে 'প্রোফাইল/ক্লাউড সেটিং' থেকে আপনার ইমেইল সেট করুন।");
+                        showUserProfileView();
+                        return;
+                    }
+
+                    collectTenantInfoFromForm(); 
+                    currentTenantData.billingRecords.forEach((record, index) => {
+                        const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${record.id}"]`);
+                        if (cardElement && !record.confirmed) { 
+                             record.rentA = parseFloat(cardElement.querySelector('.rentA').value) || 0;
+                             record.gasB = parseFloat(cardElement.querySelector('.gasB').value) || 0;
+                             record.currentC = parseFloat(cardElement.querySelector('.currentC').value) || 0;
+                             record.vatD = parseFloat(cardElement.querySelector('.vatD').value) || 0;
+                             record.depositF = parseFloat(cardElement.querySelector('.depositF').value) || 0;
+                             record.comment = cardElement.querySelector('.comment').value.trim();
+                        }
+                        if (index === 0 && cardElement && !cardElement.querySelector('.prevArrearsH').readOnly && !record.confirmed) { 
+                           record.prevArrearsH = parseFloat(cardElement.querySelector('.prevArrearsH').value) || 0;
+                        }
+                    });
+
+
+                    const dataToExport = {
+                        profileEmail: loggedInUserEmail, 
+                        tenantId: currentTenantId,
+                        loginName: currentTenantLoginName,
+                        data: currentTenantData 
+                    };
+                    
+                    if (!masterAppData.user_profiles) masterAppData.user_profiles = {};
+                    masterAppData.user_profiles[loggedInUserEmail] = JSON.parse(JSON.stringify(dataToExport));
+
+                    elements.exportedJsonDataTextarea.value = JSON.stringify(dataToExport, null, 2);
+                    showModal(elements.dataExportModal);
+                    autoExpandField(elements.exportedJsonDataTextarea);
+                });
+            }
+
+            if(elements.copyJsonBtn) {
+                elements.copyJsonBtn.addEventListener('click', () => {
+                    elements.exportedJsonDataTextarea.select();
+                    document.execCommand('copy');
+                    alert("JSON ডেটা ক্লিপবোর্ডে কপি করা হয়েছে!");
+                });
+            }
+
+
+            const rainbowColors = ['#FFADAD', '#FFD6A5', '#FDFFB6', '#CAFFBF', '#9BF6FF', '#A0C4FF', '#BDB2FF', '#FFC6FF'];
+            let rainbowColorIndex = 0;
+            function startRainbowEffect() { 
+                stopRainbowEffect();
+                if (elements.appContent.style.display !== 'none' && elements.welcomeMessage) {
+                    rainbowIntervalId = setInterval(() => {
+                        elements.welcomeMessage.style.backgroundImage = `linear-gradient(to right, ${rainbowColors[rainbowColorIndex % rainbowColors.length]}, ${rainbowColors[(rainbowColorIndex + 1) % rainbowColors.length]})`;
+                        rainbowColorIndex++;
+                    }, 1000);
+                }
+             }
+            function stopRainbowEffect() { 
+                if (rainbowIntervalId) {
+                    clearInterval(rainbowIntervalId);
+                    rainbowIntervalId = null;
+                }
+                if (elements.welcomeMessage) { // Reset to default gradient
+                     elements.welcomeMessage.style.backgroundImage = `linear-gradient(to right, var(--primary-color), var(--primary-color-dark))`;
+                }
+            }
+
+            function saveDataAndDownloadHtml() { 
+                if (!isAdminLoggedIn && !currentTenantId && !loggedInUserEmail) {
+                    alert('কোনো ভাড়াটিয়া লগইন করা নেই বা প্রোফাইল সেট করা নেই। পরিবর্তন সেভ করতে লগইন করুন বা প্রোফাইল সেট করুন।'); return;
+                }
+
+                if (!isAdminLoggedIn && currentTenantId) {
+                    collectTenantInfoFromForm();
+                    currentTenantData.billingRecords.forEach((record, index) => { 
+                        const cardElement = elements.billingRecordsContainer.querySelector(`.billing-record-card[data-id="${record.id}"]`);
+                        if (cardElement && !record.confirmed) { 
+                             record.rentA = parseFloat(cardElement.querySelector('.rentA').value) || 0;
+                             record.gasB = parseFloat(cardElement.querySelector('.gasB').value) || 0;
+                             record.currentC = parseFloat(cardElement.querySelector('.currentC').value) || 0;
+                             record.vatD = parseFloat(cardElement.querySelector('.vatD').value) || 0;
+                             record.depositF = parseFloat(cardElement.querySelector('.depositF').value) || 0;
+                             record.comment = cardElement.querySelector('.comment').value.trim();
+                        }
+                        if (index === 0 && cardElement && !cardElement.querySelector('.prevArrearsH').readOnly && !record.confirmed) { 
+                           record.prevArrearsH = parseFloat(cardElement.querySelector('.prevArrearsH').value) || 0;
+                        }
+                    });
+                    masterAppData.users[currentTenantId] = {
+                        tenantId: currentTenantId,
+                        loginName: currentTenantLoginName,
+                        data: JSON.parse(JSON.stringify(currentTenantData))
+                    };
+                }
+                if (loggedInUserEmail && masterAppData.user_profiles && masterAppData.user_profiles[loggedInUserEmail]) {
+                    // Data already in masterAppData.user_profiles
+                } else if (loggedInUserEmail && currentTenantId && currentTenantData) { // User has profile, but no data in user_profiles yet
+                     masterAppData.user_profiles[loggedInUserEmail] = {
+                        profileEmail: loggedInUserEmail,
+                        tenantId: currentTenantId, 
+                        loginName: currentTenantLoginName,
+                        data: JSON.parse(JSON.stringify(currentTenantData))
+                    };
+                }
+                
+                const dataToEmbedInHtml = JSON.parse(JSON.stringify(masterAppData)); 
+                const jsonDataString = JSON.stringify(dataToEmbedInHtml, null, 2); 
+                let currentHtml = document.documentElement.outerHTML;
+                const placeholderRegex = /<script id="app-data-store" type="application\/json">.*?<\/script>/s;
+                const newScriptTag = `<script id="app-data-store" type="application\/json">${jsonDataString}<\/script>`;
+                if (currentHtml.match(placeholderRegex)) { currentHtml = currentHtml.replace(placeholderRegex, newScriptTag); } 
+                else { currentHtml = currentHtml.replace(/<\/body>/i, `${newScriptTag}\n</body>`); }
+                currentHtml = currentHtml.replace(/\s*<!--\s*CodePen Hint: Insert your Global JS here\s*-->\s*/i, ''); // Remove codepen hints
+                currentHtml = currentHtml.replace(/<script src="https:\/\/cpwebassets.codepen.io\/assets\/editor\/iframe\/iframeRefreshCSS[^>]*><\/script>\s*/i, '');
+                currentHtml = currentHtml.replace(/<script src="https:\/\/cpwebassets.codepen.io\/assets\/editor\/iframe\/iframeRuntimeErrors[^>]*><\/script>\s*/i, '');
+                currentHtml = currentHtml.replace(/<script src="https:\/\/cpwebassets.codepen.io\/assets\/editor\/iframe\/iframeConsoleRunner[^>]*><\/script>\s*/i, '');
+                currentHtml = currentHtml.replace(/<script src="https:\/\/cpwebassets.codepen.io\/assets\/common\/stopExecutionOnTimeout[^>]*><\/script>\s*/i, '');
+                
+                const suggestedFileName = `BariVaraApp_Data_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.html`;
+                const dataUri = 'data:text/html;charset=utf-8,' + encodeURIComponent(currentHtml);
+                const linkElement = document.createElement('a');
+                linkElement.setAttribute('href', dataUri); linkElement.setAttribute('download', suggestedFileName);
+                document.body.appendChild(linkElement); linkElement.click(); document.body.removeChild(linkElement);
+                alert(`ফাইল "${suggestedFileName}" ডাউনলোড শুরু হয়েছে। অনুগ্রহ করে এই নতুন ফাইলটি ব্যবহার করুন।`);
+            }
+
+            if (elements.downloadUpdatedHtmlBtn) elements.downloadUpdatedHtmlBtn.addEventListener('click', saveDataAndDownloadHtml);
+            if (elements.adminDownloadAllDataHtmlBtn) elements.adminDownloadAllDataHtmlBtn.addEventListener('click', saveDataAndDownloadHtml);
+
+            loadInitialData();
+            showInitialView(); 
+            setupAutoExpandListeners(document.body); 
+
+        });
+    </script>
+
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+</body></html>
